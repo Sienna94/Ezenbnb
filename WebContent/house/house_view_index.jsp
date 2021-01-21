@@ -8,7 +8,7 @@
 </head>
 <body>
 <% 
-	response.sendRedirect("/ebb/houseview.do?hidx=1");
+	response.sendRedirect("/ebb/houseview.do?hidx=4");
 %>
 </body>
 </html>
