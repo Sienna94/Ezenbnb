@@ -7,10 +7,9 @@
   font-size: 15px;
 }
 body {
-  text-align: center;
-  overflow: auto;
-  overflow-x: hidden;
   width: 100%;
+  overflow: auto;
+  text-align: center;
 }
 /* a 링크 초기화 */
 a {

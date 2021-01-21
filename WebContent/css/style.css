@@ -1,30 +1,92 @@
 @charset "UTF-8";
 /* main */
+/* main 전체 */
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
 /* menu */
 header {
-  width: 100%;
-  /* height: 50px; */
-  line-height: 30px;
-  background-color: #fff;
-  top: 0;
   position: fixed;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  overflow: hidden;
+  background: #ffff88;
 }
-/* m_menu */
-.navi {
-  float: right;
-  width: 100px;
-  margin-top: 10px;
+/* menu 목록 */
+header > div {
+  display: inline-block;
+  width: 23%;
+  margin: 1%;
+  height: 60px;
+  line-height: 60px;
+  float: left;
+  border-radius: 5px;
+  background: #2fceff;
 }
-/* 회원정보 dropdown */
-.nav > li > a {
-  height: 40px;
-  width: 100px;
-  margin-top: 10px;
-  font-size: 20px;
-  font-weight: bold;
+/* 메인 이미지 영역 */
+article {
+  height: 600px;
+  overflow: hidden;
 }
-/* end 회원정보 dropdown */
-/* end m_menu */
+/* 메인 이미지 */
+article > img {
+  height: 200%;
+}
 /* end menu */
+/* 카테고리 */
+section {
+  height: 900px;
+}
+/* 카테고리 전체 */
+.category {
+  display: inline-block;
+  width: 80%;
+  margin: 10px;
+  padding: 5px;
+  /* overflow: hidden; */
+  background: #ffff88;
+}
+/* 전체 카테고리 목록 */
+.category > div {
+  display: inline-block;
+  width: 18%;
+  height: 00px;
+  float: left;
+  margin: 0.5%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  background: #ff88ff;
+}
+/* 숙소 카테고리 영역 */
+.lodge_category > div {
+  height: 500px;
+}
+/* 숙소 카테고리 제목 */
+.category > h1 {
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  font-size: 20pt;
+}
+/* 숙소 카테고리 이미지 */
+.category > a > img {
+  height: 480px;
+}
+/* end 카테고리 */
+/* footer */
+footer {
+  width: 100%;
+  height: 100px;
+  display: inline-block;
+  overflow: hidden;
+}
+footer > div {
+  display: inline-block;
+  width: 31%;
+}
+/* end footer */
 
 /* end main */
