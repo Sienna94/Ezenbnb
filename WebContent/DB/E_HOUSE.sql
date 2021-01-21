@@ -28,3 +28,5 @@ INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRI
 VALUES (seq_hidx.nextval, 2, '진달래가든', '서울시', '010-2222-2222', 'garden2.jpg', '매점', 360000, 3, 2, 7);
 INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
 VALUES (seq_hidx.nextval, 3, '장미가든', '부산시', '010-3333-3333', 'garden3.jpg', '수영장', 450000, 4, 3, 10);
+
+--SELECT * FROM E_HOUSE WHERE hIDX = '2'
