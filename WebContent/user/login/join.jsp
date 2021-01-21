@@ -9,9 +9,10 @@
 </head>
 <body>
 	<div class="join">
-	<h2>회원가입</h2>
-	<form action="/ebb/user/join.do" method="POST">
-	<div class ="join">
+		<div class="section_header">
+            <h2>회원 가입</h2>
+        </div>
+		<form action="/ebb/user/join.do" method="POST">
 		<div class="input_group">
 	      	<input class="ip_join" id="id" type="text" name="id" placeholder="이메일주소" maxlength="20"/><br>
 	      	<input class="ip_join" id="firstname" type="text" name="firstname" placeholder="이름(예: 길동)" maxlength="20"/><br>
@@ -19,8 +20,8 @@
 	      	<input class="ip_join" id="pass" type="password" name="pass" placeholder="비밀번호 설정하기" maxlength="20"/>
 		</div>
 		<div class="wrap_birth">
-    		<div>생일</div>
-    		<div>만 18세 이상의 성인만 회원으로 가입할 수 있습니다. 생일은 다른 에어비앤비 이용자에게 공개되지 않습니다.</div>
+    		<div class="content_birth">생일</div>
+    		<div class="content_birth">만 18세 이상의 성인만 회원으로 가입할 수 있습니다. 생일은 다른 에어비앤비 이용자에게 공개되지 않습니다.</div>
     		<select class="month">
     			<option value="월" selected="selected">월</option>
     			<option value="1월" >1</option>
@@ -95,15 +96,16 @@
     			<option value="1980">1980</option>
     			<option value="1979">1979</option>
     		</select>
-    		</div>   		
-    		<p>에어비앤비의 회원 전용 할인, 추천 여행 정보, 프로모션 및 정책 변경사항을 이메일로 보내드립니다. 계정 관리의 환경설정 또는 프로모션 알림에서 언제든지 메시지 수신을 거부할 수 있습니다.</p>
-    		<input type="checkbox" name="agr" value="ok"/>에어비앤비에서 보내는 마케팅 메시지를 받고 싶지 않습니다.
-    		<div></div>
-    		<button class="btn_join" type="submit">가입하기</button>
-    		<div>이미 에어비앤비 계정이 있나요?</div>
-    		<a href="/ebb/user/login/login.jsp">로그인</a>
-    	</div>
-     </form>
+    		</div>
+    		<div class="content_birth">
+	    		<p>에어비앤비의 회원 전용 할인, 추천 여행 정보, 프로모션 및 정책 변경사항을 이메일로 보내드립니다. 계정 관리의 환경설정 또는 프로모션 알림에서 언제든지 메시지 수신을 거부할 수 있습니다.</p>
+	    		<input type="checkbox" name="agr" value="ok"/>에어비앤비에서 보내는 마케팅 메시지를 받고 싶지 않습니다.
+	    	</div>   		
+ 			<div class="wrap_btn">
+ 				<button class="btn_join" type="submit">가입하기</button>
+ 			</div>    		
+    		<div>이미 에어비앤비 계정이 있나요? <a href="/ebb/user/login/login.jsp">로그인</a></div>
+     	</form>
      </div>
 </body>
 </html>

@@ -226,16 +226,12 @@ section {
 }
 /* end login.jsp */
 /* join.jsp ====================================================*/
-h2{
-	
-}
-
 .input_group #join_pass {
 	font-size: 11px;
 }
 
 .join {
-	width: 70%;
+	width: 50%;
 	margin: 0 auto;
 	display : block;
 }
@@ -246,7 +242,25 @@ h2{
 .wrap_birth{
 	display: block;
 }
-
+.content_birth{
+	margin-top : 20px;
+	margin-bottom : 20px;
+    overflow-wrap: break-word !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.28571em !important;
+    color: rgb(72, 72, 72) !important;
+}
+.wrap_birth>select{
+	margin-top: 10px; 
+	border: 1px solid #bebebe;
+    width: 32%;
+    height: 40px;
+    margin-top: 10px;
+    font-style: 14px;
+    padding-left: 15px;
+}
 #btn_chk {
 	width: 55%;
 }
@@ -351,12 +365,14 @@ table th {
 	margin-top: 30px;
 	font-weight: bold;
 }
-
+.wrap_btn{
+	text-align: center;
+}
 .btn_join {
-	width: 90%;
+	width: 98%;
 	height: 40px;
-	margin-top: 50px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	font-size: 15px;
 	font-weight: bold;
 	color: #ffffff;
