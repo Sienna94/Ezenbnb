@@ -5,6 +5,7 @@
 <configuration>
 	<properties resource="mybatis/config.propertis"/>
 	<typeAliases>
+		<typeAlias type="com.user.dto.UserDTO" alias="UserDTO"/>
 		<typeAlias type="com.house.dto.HouseDTO" alias="HouseDTO"/>
 	</typeAliases>
 	<environments default="development">
@@ -18,8 +19,8 @@
 			</dataSource>
 		</environment>
 	</environments>
-	
 	<mappers>
+		<mapper resource="mybatis/UserMapper.xml"/>
 		<mapper resource="mybatis/HouseMapper.xml"/>
 	</mappers>
 </configuration>

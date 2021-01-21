@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mybatis.UserMapper">
+	<!-- 로그인(계정찾기) -->
+	<select id="getUser" parameterType="UserDTO" resultType="UserDTO">
+		<![CDATA[
+	         SELECT * FROM E_USER WHERE u_ID=#{uid} AND uPW=#{upw}
+     	]]>
+	</select>
+	<!-- 회원 등록 -->
+	<insert id="insertUser" parameterType="UserDTO">
+		<![CDATA[
+			INSERT INTO E_USER(uIDX, u_ID, uPW, uNAME, uPHONE, uADDRESS, uEMERG, uTYPE) 
+			VALUES (seq_uidx.nextval, #{uid}, #{upw}, #{uname}, #{upw}, #{uphone}, #{uaddress}, #{uemerg}, #{utype})
+		]]>
+	</insert>
+</mapper>
