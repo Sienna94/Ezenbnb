@@ -38,18 +38,21 @@ ${dto.getHutill()}<br> --%>
 <div>평점: ${dto.getHgrade()} 점</div>
 <div>
 	------방예약정보 입력 및 예약버튼------
-	<form action="#" method="post">
+	<form action="house/Payment.jsp" method="get">
 		<div>
 	        <label for="checkin">체크인:</label>
-	        <input type="text" id="checkin" />
+	        <input type="text" name="checkin" id="checkin" />
     	</div>
     	<div>
 	        <label for="checkout">체크아웃:</label>
-	        <input type="text" id="checkout" />
+	        <input type="text" name="checkout" id="checkout" />
     	</div>
     	<div>
 	        <label for="person">인원:</label>
-	        <input type="text" id="person" />
+	        <input type="text" name="person" id="person" />
+    	</div>
+    	<div style="display:none">
+	        <input type="text" name="price" id="price" value="${dto.getHprice()}" />
     	</div>
     	<div>
 	        <button type="submit">예약가능여부보기</button>
