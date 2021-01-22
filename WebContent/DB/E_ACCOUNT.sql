@@ -28,3 +28,5 @@ create sequence seq_aidx  nocache nocycle;
 --drop sequence seq_aidx;
 
 
+INSERT INTO E_ACCOUNT(aIDX, mIDX, hIDX, aCHECKIN, aCHECKOUT, aPERSON, aPRICE, aCARD, aCARDNUM, aEXDATE, aCVV, aPOSTNUM, aAREA) 
+VALUES(seq_aidx.nextval, 1, 1, '1', '1', 1, 1, '1', '1', '1', '1', '1', '1')

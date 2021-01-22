@@ -3,9 +3,9 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="mybatis.AccountMapper">
-	<insert id="insertAccount" parameterType="AccountDTO">
-		<![CDATA[
-	         INSERT INTO E_ACCOUNT(aIDX, mIDX, hIDX, aCHECKIN,aCHECKOUT,aPERSON,aPRICE,aCARD,aCARDNUM,aEXDATE,aCVV,aPOSTNUM,aAREA) 
+	<insert id="AccountInsert" parameterType="AccountDTO">
+		<![CDATA[			
+	        INSERT INTO E_ACCOUNT(aIDX, mIDX, hIDX, aCHECKIN, aCHECKOUT, aPERSON, aPRICE, aCARD, aCARDNUM, aEXDATE, aCVV, aPOSTNUM, aAREA) 
 			VALUES(seq_aidx.nextval, #{midx}, #{hidx}, #{acheckin}, #{acheckout}, #{aperson}, #{aprice}, #{card}, #{acardnum}, #{aexdate}, #{cvv}, #{apostnum}, #{aarea})
      	]]>
 	</insert>
