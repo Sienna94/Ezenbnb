@@ -7,8 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% 
-	response.sendRedirect("/ebb/houseview.do?hidx=4");
-%>
+<div>
+	<form action="/ebb/houseview.do?" method="post">
+		<div>
+	        <label for="hidx">방번호 검색:</label>
+	        <input type="text" id="hidx" name="hidx"/>
+	        <button type="submit">검색</button>
+    	</div>
+	</form>
+</div>
+<%-- <% 
+	response.sendRedirect("/ebb/houseview.do?hidx=1");
+%> --%>
 </body>
 </html>

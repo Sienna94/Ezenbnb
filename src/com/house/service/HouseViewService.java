@@ -14,7 +14,7 @@ public class HouseViewService implements CommandAction {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 
 		String hidx = request.getParameter("hidx");
-
+		
 		HouseDAO dao = new HouseDAO(); 
 		
 		HouseDTO dto = dao.getHouseOne(hidx);
