@@ -25,41 +25,20 @@
       <div id="wrap"></div>
 
       <header>
-        <dv class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand"><img src="https://img.icons8.com/ultraviolet/344/small-business.png" alt="logo" width="40"/></a>
-          <div>검색</div><!-- 검색 -->
-          <div>호스트전환</div><!-- 호스트전환 -->
-          <div>회원정보</div><!-- 회원정보 -->
-
-        </dv>
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="../index.jsp">강의 평가 웹 사이트</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div id="navbar" class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.jsp">메인</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a id="dropdown" class="nav-link dropdown-toggle" data-toggle="dropdown">회원 관리</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown">
-                  <a class="dropdown-item" href="./userLogin.jsp">로그인</a>
-                  <a class="dropdown-item" href="./userRegister.jsp">회원가입</a>
-                  <a href="#" class="dropdown-item">님님님</a>
-                  <a class="dropdown-item" href="./userLogout.jsp">로그아웃</a>
-                </div>
-              </li>
-            </ul>
-            <!-- 상단 검색 부분 -->
-            <form action="./index.jsp" method="get" class="form-inline my-2 my-lg-0">
-              <input type="text" name="search" class="form-control mr-sm-2" placeholder="내용을 입력하세요" >
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
-            </form>
+        <nav class="navbar navbar-default">
+          <div class="navbar_header"><!-- 네비게이션 헤더부 -->
+            <a class="navbar-brand" href="#"><img src="" alt="logo"></a><!-- 메뉴바 제목 -->
+            <!-- 네비게이션 메뉴부분 반응형으로 만들어 좁아지면 버튼에 넣음 -->
+            <button type="button" class="navbar-toggle collapsed"
+              data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false">
+              <!-- 좁아지면 나타나는 햄버거 버튼 <span/>사용사 1줄만 표현-->
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
           </div>
-        
+        </nav>
       </header>
 
       <article>
