@@ -53,6 +53,8 @@ ${dto.getHutill()}<br> --%>
     	</div>
     	<div style="display:none">
 	        <input type="text" name="price" id="price" value="${dto.getHprice()}" />
+	        <input type="text" name="hidx" id="hidx" value="${dto.getHidx()}" />
+	        <input type="text" name="midx" id="midx" value="${dto.getMidx()}" />
     	</div>
     	<div>
 	        <button type="submit">예약가능여부보기</button>

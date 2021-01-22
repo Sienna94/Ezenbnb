@@ -47,6 +47,14 @@
         <label for="area">지역: </label>
         <input type="text" name="area"/>
    	</div>
+  	<div style="display:none">
+        <input type="text" name="price" id="price" value="${param.price}" />
+        <input type="text" name="hidx" id="hidx" value="${param.hidx}" />
+        <input type="text" name="midx" id="midx" value="${param.midx}" />
+        <input type="text" name="checkin" id="checkin" value="${param.checkin}" />
+        <input type="text" name="checkout" id="checkout" value="${param.checkout}" />
+        <input type="text" name="person" id="person" value="${param.person}" />
+   	</div>
   	<div>
         <button type="submit">예약신청하기</button>
    	</div>
