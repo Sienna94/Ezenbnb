@@ -17,11 +17,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<input type="button" style="width: 100px;"
-			onclick="location.href='/ebb/index.jsp'" value="메인">
-		<input type="button" style="width: 100px;" value="환불 관리">
-		<input type="button" style="width: 100px;" value="예약 관리">
-		<input type="button" style="width: 100px;" value="회원 관리">
-
+			<input type="button" class="btn btn-default btn-lg"onclick="location.href='/ebb/main/main.html'" value="메인">
+			<input type="button" class="btn btn-default btn-lg" value="환불 관리">
+			<input type="button" class="btn btn-default btn-lg" value="예약 관리">
+			<button type="button" class="btn btn-default btn-lg" onclick="location.href='/ebb/userList.do'">회원 관리</button>
 </body>
 </html>

@@ -16,4 +16,12 @@
 			VALUES (seq_uidx.nextval, #{uid}, #{upw}, #{uname}, #{ubirth})
 		]]>
 	</insert>
+		
+	<!-- 회원 리스트 -->
+	<select id="getUserList" resultType="UserDTO">
+		<![CDATA[
+			SELECT * FROM E_USER
+		]]>
+	</select>
+	
 </mapper>

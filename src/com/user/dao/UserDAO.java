@@ -2,6 +2,7 @@ package com.user.dao;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.*;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -49,5 +50,17 @@ public class UserDAO {
 		}
 		
 		return n;
+	}
+	//회원 리스트 가져오기-----------------------------------	
+	public List<UserDTO> getUserList() {
+		SqlSession session = factory.openSession();
+		List<UserDTO> list = session.selectList("mybatis.UserMapper.getUserList");
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println("Uid: "+list.get(0).getUid());
+		}
+		System.out.println("Uname: "+list.get(0).getUname());
+	
+		session.close();
+		return list ;
 	}	
 }
