@@ -12,9 +12,9 @@
 		<div class="section_header">
             <h2>회원 가입</h2>
         </div>
-		<form action="/ebb/user/join.do" method="POST">
+		<form action="/ebb/join.do" method="POST">
 		<div class="input_group">
-	      	<input class="ip_join" id="id" type="text" name="id" placeholder="이메일주소" maxlength="20"/><br>
+	      	<input class="ip_join" id="id" type="text" name="id" placeholder="이메일주소" maxlength="30"/><br>
 	      	<input class="ip_join" id="firstname" type="text" name="firstname" placeholder="이름(예: 길동)" maxlength="20"/><br>
 	      	<input class="ip_join" id="lastname" type="text" name="lastname" placeholder="성(예: 홍)" maxlength="20"/><br>     	
 	      	<input class="ip_join" id="pass" type="password" name="pass" placeholder="비밀번호 설정하기" maxlength="20"/>
@@ -22,8 +22,8 @@
 		<div class="wrap_birth">
     		<div class="content_birth">생일</div>
     		<div class="content_birth">만 18세 이상의 성인만 회원으로 가입할 수 있습니다. 생일은 다른 에어비앤비 이용자에게 공개되지 않습니다.</div>
-    		<select class="month">
-    			<option value="월" selected="selected">월</option>
+    		<select class="month" name="month">
+    			<option value="월"  selected="selected">월</option>
     			<option value="1월" >1</option>
     			<option value="2월" >2</option>
     			<option value="3월" >3</option>
@@ -37,8 +37,8 @@
     			<option value="11월" >11</option>
     			<option value="12월" >12</option>
     		</select>
-    		<select class="day">
-	    		<option value="일" selected="selected">일</option>
+    		<select class="day" name="day">
+	    		<option value="일"  selected="selected">일</option>
     			<option value="1" >1</option>
     			<option value="2">2</option>
     			<option value="3">3</option>
@@ -71,7 +71,7 @@
     			<option value="30">30</option>
     			<option value="31">31</option>
     		</select>
-    		<select class="year">
+    		<select class="year" name="year">
     			<option value="년" selected="selected">년</option>
     			<option value="2000" >2000</option>
     			<option value="1999">1999</option>

@@ -26,7 +26,7 @@ public class UserDAO {
 	public UserDTO getLoginUser(String uid, String upw) {
 		SqlSession session=factory.openSession();
 		UserDTO dto=new UserDTO(uid, upw);
-		UserDTO entity=session.selectOne("mybatis.UserMapper.getLoginUser", dto);
+		UserDTO entity=session.selectOne("mybatis.UserMapper.getUser", dto);
 		session.close();
 		
 		return entity;
@@ -37,7 +37,7 @@ public class UserDAO {
 		System.out.println("dao.registration에 들어옴");
 		int n = 0;
 		try {
-			n = session.insert("mybatis.UserMapper.regist", dto);
+			n = session.insert("mybatis.UserMapper.insertUser", dto);
 			System.out.println("registration_n: "+ n);
 			if (n > 0)
 				session.commit();

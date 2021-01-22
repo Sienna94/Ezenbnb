@@ -9,6 +9,7 @@ public class UserDTO {
 	private String uaddress;
 	private String uemerg;
 	private int utype;
+	private String ubirth;
 	
 	public UserDTO() {
 		super();
@@ -22,7 +23,7 @@ public class UserDTO {
 	}
 
 	public UserDTO(int udix, String uid, String upw, String uname, String uphone, String uaddress, String uemerg,
-			int utype) {
+			int utype, String ubirth) {
 		super();
 		this.udix = udix;
 		this.uid = uid;
@@ -32,6 +33,7 @@ public class UserDTO {
 		this.uaddress = uaddress;
 		this.uemerg = uemerg;
 		this.utype = utype;
+		this.ubirth = ubirth;
 	}
 
 	public int getUdix() {
@@ -97,4 +99,13 @@ public class UserDTO {
 	public void setUtype(int utype) {
 		this.utype = utype;
 	}
+
+	public String getUbirth() {
+		return ubirth;
+	}
+
+	public void setUbirth(String ubirth) {
+		this.ubirth = ubirth;
+	}
+
 }

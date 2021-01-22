@@ -12,9 +12,9 @@
 		<div class="section_header">
             <h2>로그인</h2>
         </div>
-		<form action="/ebb/user/login.do" method="POST">
+		<form action="/ebb/login.do" method="POST">
 	    <div class="input_group">
-	      	<input id="id" type="text" name="id" placeholder="이메일주소" maxlength="20"/><br>
+	      	<input id="id" type="text" name="id" placeholder="이메일주소" maxlength="30"/><br>
 	      	<input id="pass" type="password" name="pass" placeholder="비밀번호" maxlength="20"/>
 	   	</div>
  		<div class="content_birth">
