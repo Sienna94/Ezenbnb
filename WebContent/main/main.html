@@ -4,82 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- 부트스트랩 -->
-<!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-<!-- 부가적인 테마 -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
-<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-    <!-- <link rel="stylesheet" href="../css/style.css" type="text/css"/> -->
-    <link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+    <!-- 부트스트랩보다 jquery가 밑에 있으면 동작안함 -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
   </head>
-  <style>
-      article{background: #ff8888; height: 300px; line-height: 300px;}
-      footer{background: #ff6666; height: 80px; line-height: 50px;}
-  </style>
-  <body>
-      <div id="wrap"></div>
 
+  <body>
+    <div id="wrap">
       <header>
-        <nav class="navbar navbar-default">
-          <div class="navbar_header"><!-- 네비게이션 헤더부 -->
-            <a class="navbar-brand" href="#"><img src="" alt="logo"></a><!-- 메뉴바 제목 -->
-            <!-- 네비게이션 메뉴부분 반응형으로 만들어 좁아지면 버튼에 넣음 -->
-            <button type="button" class="navbar-toggle collapsed"
-              data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-              aria-expanded="false">
-              <!-- 좁아지면 나타나는 햄버거 버튼 <span/>사용사 1줄만 표현-->
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+        <div class="menu_group">
+          <div class="logo">
+            <a href="#">
+              <img src="../img/category_sample1.jpg" alt="logo" />
+            </a>
           </div>
-        </nav>
+          <div class="search">
+            <form action="../index.jsp" method="POST">
+              <input
+                type="text"
+                id="input"
+                name="search"
+                placeholder="검색 시작하세요"
+              />
+              <input type="submit" id="btn" value="검색" />
+            </form>
+          </div>
+          <div class="menu_member">
+            <div class="host"><a href="#">호스트 전환</a></div>
+            <div class="member">
+              <a href="#">회원 정보</a>
+            </div>
+          </div>
+        </div>
+        <!-- /menu_group -->
       </header>
 
       <article>
-        <!-- 메인 이미지(이미지에 비치게 만들기) -->
-        <img src="../img/testbg.jpg" alt="main_img" style="background: #ff00ff;"/>
-        <!-- 근처 숙소 둘러보기(추후업데이트 예정) -->
+        <div class="main_bg"></div>
       </article>
 
       <section>
-        <!-- 전체 카테고리 -->
         <div class="category">
-          <!-- 지역 카테고리 -->
-          <div class="category_location">
-            <div>
-              <a href="#">
-                <img src="../img/category_sample1.jpg" alt="지역명"/>
-                  <span class="l_span">예로 서울</span>
-                  <span class="d_span">차로 1시간 거리</span>
-              </a>
-            </div><!-- 카테고리 목록 -->
-          </div><!-- //location -->
-          <!-- 숙소 유형카테고리 -->
-          <div class="category_lodge">
-            <h1>어디에서나, 여행은 살아보는 거야!</h1>
-            <div>
-              <a href="#">
-                <img src="../img/category_sample2.jpg" alt="테마"/>
-                <span class="distance">집 전체</span>
-              </a>
-            </div><!-- 카테고리 목록 -->
-          </div><!-- //lodge -->
-        </div><!-- //category -->
+          <div class="location">
+            <img
+              src="https://a0.muscache.com/im/pictures/71e23854-a3c7-491c-b715-6e86233a293f.jpg?im_q=medq&im_w=240"
+              alt="location1"
+            />
+            <div class="explan">
+              <span>서울</span>
+              <span>차로 2시간 거리</span>
+            </div>
+          </div>
+          <!-- /location -->
+        </div>
+        <!-- /category -->
+        <div class="category">
+          <h1>어디에서나, 여행은 살아보는 거야!</h1>
+          <div class="lodge">
+            <img src="../img/house1.jpg" alt="lodge1" />
+            <div class="explan">
+              <span>방갈로</span>
+            </div>
+          </div>
+          <!-- /lodge -->
+          <div class="lodge">
+            <img src="../img/house1.jpg" alt="lodge1" />
+            <div class="explan">
+              <span>방갈로</span>
+            </div>
+          </div>
+          <!-- /lodge -->
+        </div>
+        <!-- /category -->
       </section>
 
       <footer>
-          <div class="footer_info"><a href="#">개인정보 처리방침</a></div>
-          <div class="footer_info"><a href="#">이용약관</a></div>
-          <div class="footer_info"><a href="#">사이트맵</a></div>
-          <div class="footer_info">footer © 2021 Ezenbnb, All rights reserved Ovenhers</div>
+        <div class="info_group">
+          <div class="info_item"><a href="#">개인정보 처리방침</a></div>
+          <div class="info_item"><a href="#">이용약관</a></div>
+          <div class="info_item"><a href="#">사이트맵</a></div>
+          <div class="copyright">
+            © 2021 Ezenbnb, All rights reserved Ovenhers
+          </div>
+        </div>
+        <!-- /.footer_group -->
       </footer>
-
     </div>
     <!-- end #wrap -->
   </body>
