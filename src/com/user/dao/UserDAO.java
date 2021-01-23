@@ -56,9 +56,16 @@ public class UserDAO {
 		SqlSession session = factory.openSession();
 		List<UserDTO> list = session.selectList("mybatis.UserMapper.getUserList");
 		for (int i = 0; i < list.size(); i++) {
-			System.out.println("Uid: "+list.get(0).getUid());
+			System.out.println("getUidx: "+list.get(i).getUidx());
+			System.out.println("getUid: "+list.get(i).getUid());
+			System.out.println("getUpw: "+list.get(i).getUpw());
+			System.out.println("getUname: "+list.get(i).getUname());
+			System.out.println("getUphone: "+list.get(i).getUphone());
+			System.out.println("getUaddress: "+list.get(i).getUaddress());
+			System.out.println("getUemerg: "+list.get(i).getUemerg());
+			System.out.println("getUtype: "+list.get(i).getUtype());
+			System.out.println("getUbirth: "+list.get(i).getUbirth());
 		}
-		System.out.println("Uname: "+list.get(0).getUname());
 	
 		session.close();
 		return list ;

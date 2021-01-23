@@ -1,5 +1,6 @@
 select * from tab;
 select * from E_USER;
+select * from E_USER where u_id='aaa';
 
 drop table E_USER;
 drop sequence seq_uidx;

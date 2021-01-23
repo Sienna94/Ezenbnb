@@ -13,7 +13,7 @@ public class UserListService implements CommandAction{
 	
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		System.out.println("어디니");
+		System.out.println("어디니123");
 		UserDAO userdao = new UserDAO();
 		List<UserDTO> list = userdao.getUserList();
 		
