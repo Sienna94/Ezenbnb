@@ -2,7 +2,7 @@ package com.user.dto;
 
 public class UserDTO {
 	private int uidx;
-	private String uid;
+	private String userid;
 	private String upw;
 	private String uname;
 	private String uphone;
@@ -16,17 +16,17 @@ public class UserDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public UserDTO(String uid, String upw) {
+	public UserDTO(String userid, String upw) {
 		super();
-		this.uid = uid;
+		this.userid = userid;
 		this.upw = upw;
 	}
 
-	public UserDTO(int uidx, String uid, String upw, String uname, String uphone, String uaddress, String uemerg,
+	public UserDTO(int uidx, String userid, String upw, String uname, String uphone, String uaddress, String uemerg,
 			int utype, String ubirth) {
 		super();
 		this.uidx = uidx;
-		this.uid = uid;
+		this.userid = userid;
 		this.upw = upw;
 		this.uname = uname;
 		this.uphone = uphone;
@@ -44,12 +44,12 @@ public class UserDTO {
 		this.uidx = uidx;
 	}
 
-	public String getUid() {
-		return uid;
+	public String getUserid() {
+		return userid;
 	}
 
-	public void setUid(String uid) {
-		this.uid = uid;
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
 
 	public String getUpw() {

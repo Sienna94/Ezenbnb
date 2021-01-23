@@ -23,7 +23,7 @@
 			<c:forEach items="${list}" var="ob">					
 				<tr>
 					<td align="center">${ob.getUidx()}</td>
-					<td align="center">${ob.getUid()}</td>
+					<td align="center">${ob.getUserid()}</td>
 					<td align="center">${ob.getUname()}</td>
 					<td align="center">${ob.getUphone()}</td>
 					<td align="center">${ob.getUaddress()}</td>

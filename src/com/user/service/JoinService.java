@@ -26,7 +26,7 @@ public class JoinService implements CommandAction{
 		
 		//save DATA
 		UserDTO dto = new UserDTO();
-		dto.setUid(uid);
+		dto.setUserid(uid);
 		dto.setUpw(upw);
 		dto.setUname(uname);
 		dto.setUbirth(ubirth);
