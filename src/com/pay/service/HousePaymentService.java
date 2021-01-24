@@ -12,6 +12,8 @@ public class HousePaymentService implements CommandAction {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
+		request.setCharacterEncoding("UTF-8");
+		
 		String card = request.getParameter("card");
 		String cardnum = request.getParameter("cardnum");
 		String exdate = request.getParameter("exdate");
@@ -28,10 +30,10 @@ public class HousePaymentService implements CommandAction {
 		
 		// 데이터 저장
 		AccountDTO dto = new AccountDTO();
-		dto.setCard(card);
+		dto.setAcard(card);
 		dto.setAcardnum(cardnum);
-		dto.setAdate(exdate);
-		dto.setCvv(cvv);
+		dto.setAexdate(exdate);
+		dto.setAcvv(cvv);
 		dto.setApostnum(postnum);
 		dto.setAarea(area);
 		

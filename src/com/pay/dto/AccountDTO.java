@@ -11,11 +11,11 @@ public class AccountDTO {
 	
 	private int aprice;
 	private String astate;
-	private String card;
+	private String acard;
 	
 	private String acardnum;
 	private String aexdate;
-	private String cvv;
+	private String acvv;
 	
 	private String apostnum;
 	private String aarea;
@@ -25,7 +25,7 @@ public class AccountDTO {
 		// TODO Auto-generated constructor stub
 	}
 	public AccountDTO(int aidx, int midx, int hidx, String acheckin, String acheckout, int aperson, int aprice,
-			String astate, String card, String acardnum, String aexdate, String cvv, String apostnum, String aarea,
+			String astate, String acard, String acardnum, String aexdate, String acvv, String apostnum, String aarea,
 			String adate) {
 		super();
 		this.aidx = aidx;
@@ -36,10 +36,10 @@ public class AccountDTO {
 		this.aperson = aperson;
 		this.aprice = aprice;
 		this.astate = astate;
-		this.card = card;
+		this.acard = acard;
 		this.acardnum = acardnum;
 		this.aexdate = aexdate;
-		this.cvv = cvv;
+		this.acvv = acvv;
 		this.apostnum = apostnum;
 		this.aarea = aarea;
 		this.adate = adate;
@@ -92,11 +92,11 @@ public class AccountDTO {
 	public void setAstate(String astate) {
 		this.astate = astate;
 	}
-	public String getCard() {
-		return card;
+	public String getAcard() {
+		return acard;
 	}
-	public void setCard(String card) {
-		this.card = card;
+	public void setAcard(String acard) {
+		this.acard = acard;
 	}
 	public String getAcardnum() {
 		return acardnum;
@@ -110,11 +110,11 @@ public class AccountDTO {
 	public void setAexdate(String aexdate) {
 		this.aexdate = aexdate;
 	}
-	public String getCvv() {
-		return cvv;
+	public String getAcvv() {
+		return acvv;
 	}
-	public void setCvv(String cvv) {
-		this.cvv = cvv;
+	public void setAcvv(String acvv) {
+		this.acvv = acvv;
 	}
 	public String getApostnum() {
 		return apostnum;
@@ -134,6 +134,4 @@ public class AccountDTO {
 	public void setAdate(String adate) {
 		this.adate = adate;
 	}
-	
-	
 }

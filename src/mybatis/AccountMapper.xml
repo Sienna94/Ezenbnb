@@ -6,7 +6,7 @@
 	<insert id="AccountInsert" parameterType="AccountDTO">
 		<![CDATA[			
 	        INSERT INTO E_ACCOUNT(aIDX, mIDX, hIDX, aCHECKIN, aCHECKOUT, aPERSON, aPRICE, aCARD, aCARDNUM, aEXDATE, aCVV, aPOSTNUM, aAREA) 
-			VALUES(seq_aidx.nextval, #{midx}, #{hidx}, #{acheckin}, #{acheckout}, #{aperson}, #{aprice}, #{card}, #{acardnum}, #{aexdate}, #{cvv}, #{apostnum}, #{aarea})
+			VALUES(seq_aidx.nextval, #{midx}, #{hidx}, #{acheckin}, #{acheckout}, #{aperson}, #{aprice}, #{acard}, #{acardnum}, #{aexdate}, #{acvv}, #{apostnum}, #{aarea})
      	]]>
 	</insert>
 </mapper>
