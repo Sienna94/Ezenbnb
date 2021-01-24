@@ -13,20 +13,20 @@ public class JoinService implements CommandAction{
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		request.setCharacterEncoding("UTF-8");
 	
-		String uid=request.getParameter("id");
+		String userid=request.getParameter("id");
 		String upw=request.getParameter("pass");
 		String uname=request.getParameter("lastname")+request.getParameter("firstname");
 		String ubirth=request.getParameter("year")+"년"+request.getParameter("month")+"월"
 					+request.getParameter("day")+"일";
 		
-		System.out.println(uid);
+		System.out.println(userid);
 		System.out.println(upw);
 		System.out.println(uname);
 		System.out.println(ubirth);
 		
 		//save DATA
 		UserDTO dto = new UserDTO();
-		dto.setUserid(uid);
+		dto.setUserid(userid);
 		dto.setUpw(upw);
 		dto.setUname(uname);
 		dto.setUbirth(ubirth);

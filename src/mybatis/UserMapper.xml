@@ -6,14 +6,14 @@
 	<!-- 로그인(계정찾기) -->
 	<select id="getUser" parameterType="UserDTO" resultType="UserDTO">
 		<![CDATA[
-	         SELECT * FROM E_USER WHERE userID=#{uid} AND uPW=#{upw}
+	         SELECT * FROM E_USER WHERE userID=#{userid} AND uPW=#{upw}
      	]]>
 	</select>
 	<!-- 회원 등록 -->
 	<insert id="insertUser" parameterType="UserDTO">
 		<![CDATA[
 			INSERT INTO E_USER(uIDX, userID, uPW, uNAME, uBIRTH) 
-			VALUES (seq_uidx.nextval, #{uid}, #{upw}, #{uname}, #{ubirth})
+			VALUES (seq_uidx.nextval, #{userid}, #{upw}, #{uname}, #{ubirth})
 		]]>
 	</insert>
 		

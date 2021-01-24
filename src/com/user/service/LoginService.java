@@ -15,14 +15,14 @@ public class LoginService implements CommandAction{
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		HttpSession session=request.getSession();
 		
-		String uid=request.getParameter("id");
+		String userid=request.getParameter("id");
 		String upw=request.getParameter("pass");
 		
 		// 자동로그인 변수
 		String loginChk=request.getParameter("autologin");
 		
 		UserDAO dao = new UserDAO();
-		UserDTO entity = dao.getLoginUser(uid, upw);
+		UserDTO entity = dao.getLoginUser(userid, upw);
 		
 		if (entity != null) {
 			// 세션설정
@@ -30,12 +30,12 @@ public class LoginService implements CommandAction{
 			
 			//로그인 유지처리
             if(loginChk != null){
-                Cookie cookie = new Cookie("id", uid);
+                Cookie cookie = new Cookie("id", userid);
                 cookie.setMaxAge(60);
                 cookie.setPath("/");
                 response.addCookie(cookie);
             }
-            System.out.println("로그인 성공/ 아이디:" + uid);
+            System.out.println("로그인 성공/ 아이디:" + userid);
 			return "index.jsp";
 		}else {
 			session.setAttribute("logFail","아이디 혹은 패스워드를 잘못 입력되었습니다");

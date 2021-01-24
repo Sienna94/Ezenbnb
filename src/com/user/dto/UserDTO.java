@@ -22,25 +22,11 @@ public class UserDTO {
 		this.upw = upw;
 	}
 
-	public UserDTO(int uidx, String userid, String upw, String uname, String uphone, String uaddress, String uemerg,
-			int utype, String ubirth) {
-		super();
-		this.uidx = uidx;
-		this.userid = userid;
-		this.upw = upw;
-		this.uname = uname;
-		this.uphone = uphone;
-		this.uaddress = uaddress;
-		this.uemerg = uemerg;
-		this.utype = utype;
-		this.ubirth = ubirth;
-	}
-
 	public int getUidx() {
 		return uidx;
 	}
 
-	public void setUdix(int uidx) {
+	public void setUidx(int uidx) {
 		this.uidx = uidx;
 	}
 
