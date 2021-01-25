@@ -43,7 +43,7 @@ public class CategoryDAO {
 	// 카테고리 리스트 보여주기------------------------------------
 	public List<CategoryDTO> getCategoryList() {
 		SqlSession session = factory.openSession();
-		List<CategoryDTO> clist = session.selectList("mybatis.CategoryMapper.categoryList");
+		List<CategoryDTO> clist = session.selectList("mybatis.CategoryMapper.getCategoryList");
 		session.close();
 		return clist;
 	}

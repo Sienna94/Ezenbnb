@@ -10,12 +10,12 @@
 			<th align="center">카테고리 명</th>
 		</tr>
 
-		<c:if test="${!empty list}">
-			<c:forEach items="${list}" var="ob">
+		<c:if test="${!empty clist}">
+			<c:forEach items="${clist}" var="ob">
 				<tr>
-					<td align="left">${ob.getcidx()}</td>
+					<td align="left">${ob.getcIDX()}</td>
+					<td align="left">${ob.getcName()}</td>
 				</tr>
-			
 			</c:forEach>
 		</c:if>
 

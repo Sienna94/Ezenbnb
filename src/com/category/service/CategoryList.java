@@ -17,7 +17,7 @@ public class CategoryList implements CommandAction{
 		CategoryDAO cdao = new CategoryDAO();
 		List<CategoryDTO> clist = cdao.getCategoryList();
 		request.setAttribute("clist", clist);
-		return "admim_category/admin_listcategory.jsp";
+		return "admin_category/admin_listcategory.jsp";
 	}
 	
 
