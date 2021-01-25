@@ -19,13 +19,12 @@
 			<h3 id="tit">ezenbnb</h3>
 			<div id="tab">
 				<ul class="nav nav-tabs">
-					<li role="presentation"><a href="#">홈</a></li>
-					<li role="presentation"><a href="#">메세지</a></li>
-					<li role="presentation"><a href="#">예약</a></li>
-					<li role="presentation"><a href="#">달력</a></li>
-					<li role="presentation"><a href="#">숙소</a></li>
-					<li role="presentation"><a href="#">실적</a></li>
-					<li role="presentation"><a href="#">도움말</a></li>
+					<li role="presentation"><a href="hostmain.jsp">홈</a></li>
+					<li role="presentation"><a href="inbox.jsp">메세지</a></li>
+					<li role="presentation"><a href="/ebb/user/guest/travel.jsp">예약</a></li>
+					<li role="presentation"><a href="/ebb/user/guest/travel.jsp">달력</a></li>
+					<li role="presentation"><a href="house.jsp">숙소</a></li>
+					<li role="presentation"><a href="performance.jsp">실적</a></li>
 				</ul>
 			</div>
 		</div>
