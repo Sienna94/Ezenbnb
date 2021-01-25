@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <style>
 input[type=date], select {
-  width: 100%;
+  width: 500px;
   padding: 12px 0px;
   margin: 8px 0;
   display: inline-block;
@@ -17,7 +17,7 @@ input[type=date], select {
 }
 
 input[type=submit] {
-  width: 100%;
+  width: 500px;
   background-color: #4CAF50;
   color: white;
   padding: 14px 0px;
@@ -38,9 +38,30 @@ div {
 }
 
 form div {
-  padding: 20px 0px;
+  padding: 10px 0px 0px 0px;
+}
+
+label {
+	display: block;
+	width: 300px;
 }
 </style>
+<script>
+	function checkWrite(){
+	   if(document.inputForm.checkin.value=="") {
+	       alert("체크인 날짜를 입력하세요");
+	       inputForm.checkin.focus();
+	   }else if(document.inputForm.checkout.value==""){ 
+	       alert("체크아웃 날짜를 입력하세요");
+	       inputForm.checkout.focus();
+	   }else if(document.inputForm.person.value=="none"){ 
+		   alert("인원을 입력하세요");
+		   inputForm.person.focus();
+	   }else{
+	   	   document.inputForm.submit(); 
+	   }
+	}
+</script>
 </head>
 <body>
 <%-- 방상세페이지<br>
@@ -91,19 +112,19 @@ ${dto.getHutill()}<br> --%>
 <div>
 	<hr style="width:500px; margin-left:0px;">
 	<h2>방예약정보 입력 및 예약버튼</h2>
-	<form action="house/Payment.jsp" method="get">
+	<form name="inputForm" action="house/Payment.jsp" method="get">
 		<div>
-	        <label for="checkin">체크인:</label>
+	        <label for="checkin">체크인</label>
 	        <input type="date" name="checkin" id="checkin" />
 	        <!-- <input type="text" name="checkin" id="checkin" /> -->
     	</div>
     	<div>
-	        <label for="checkout">체크아웃:</label>
+	        <label for="checkout">체크아웃</label>
 	        <input type="date" name="checkout" id="checkout" />
 	        <!-- <input type="text" name="checkout" id="checkout" /> -->
     	</div>
     	<div>
-	        <label for="person">인원:</label>
+	        <label for="person">인원</label>
 	        <!-- <input type="text" name="person" id="person" /> -->
 			<select name="person" >
 			    <option value="none">인원선택</option>
@@ -125,7 +146,7 @@ ${dto.getHutill()}<br> --%>
 	        <input type="text" name="midx" id="midx" value="${dto.getMidx()}" />
     	</div>
     	<div>
-	        <button type="submit">예약가능여부보기</button>
+	        <button type="button" onclick="checkWrite()">예약가능여부보기</button>
     	</div>
 	</form>
 </div>
