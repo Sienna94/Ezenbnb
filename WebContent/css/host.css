@@ -1,0 +1,71 @@
+@charset "EUC-KR";
+
+.upperMenu {
+	display: inline-block;
+	height: 64px;
+	width: 100%;
+	background: aqua;
+}
+
+#menu1 {
+	width: 80%;
+	height: 100%;
+	display: inline-block;
+	background: fuchsia;
+}
+
+#tit {
+	width: 10%;
+	background: gray;
+	float: left;
+}
+
+#tab {
+	width: 90%;
+	float: right;
+	background: lime;
+}
+
+#menu2 {
+	display: inline-block;
+	text-align: right;
+	width: 20%;
+	float: right;
+}
+
+.dropdown {
+	float: right;
+	margin-right: 100px;
+}
+
+.wrap {
+	display: block;
+	text-align: center;
+}
+
+.wrap_host1 {
+	background: olive;
+	width: 60%;
+	height: 100%;
+	margin: auto;
+	display: inline-block;
+}
+#main1{
+	text-align:left;
+	width: 70%;
+	background: maroon;
+	float: left;
+}
+#main2{
+	text-align:left;
+	width: 30%;
+	background: blue;
+	float: right;
+}
+
+.wrap_msg1{
+	
+}
+.wrap_msg2{
+	
+}

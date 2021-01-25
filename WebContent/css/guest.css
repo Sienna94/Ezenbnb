@@ -1,0 +1,67 @@
+@charset "EUC-KR";
+
+.upperMenu {
+	display: inline-block;
+	height: 100px;
+	width: 100%;
+	background: aqua;
+}
+
+.wrap {
+	float: right;
+	margin-right: 100px;
+}
+
+.wrap_like {
+	display: inline-block;
+}
+
+.wrap_like1 {
+	display: inline-block;
+	width: 40%;
+	height:100%;
+	background: gray;
+}
+
+.wrap_item {
+	width: 792px;
+	height: 200px;
+	background: aqua;
+	margin: 20px;
+	display: block;
+}
+
+.item_info {
+	background: fuchsia;
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+
+.wrap_item>img {
+	height: 200px;
+	width: 300px;
+	float: left;
+}
+
+#wrap_item2 {
+	height:100%;
+	background: green;
+	float: right;
+}
+
+#like {
+	text-align:right;
+	height: 90%;
+	color: red;
+	background:lime;
+}
+#price {
+	height: 10%;
+}
+.map{
+	width : 60px;
+	height:100%;
+	background:blue;
+	
+}
