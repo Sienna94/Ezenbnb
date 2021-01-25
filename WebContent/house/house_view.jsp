@@ -85,7 +85,7 @@ ${dto.getHperson()}<br>
 ${dto.getHutill()}<br> --%>
 
 <div><h1>방제목: ${dto.getHname()}</h1></div>
-<div><img src="img/${dto.getHimage()}" alt="House Image"></div>
+<div><img src="img/house/${dto.getHimage()}" alt="House Image"></div>
 <div>
 	<hr style="width:500px; margin-left:0px;">
 	<h2>방정보</h2>
