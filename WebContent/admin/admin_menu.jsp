@@ -17,9 +17,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-			<input type="button" class="btn btn-default btn-lg"onclick="location.href='/ebb/main/main.html'" value="메인">
-			<input type="button" class="btn btn-default btn-lg" value="환불 관리">
-			<input type="button" class="btn btn-default btn-lg" value="예약 관리">
-			<button type="button" class="btn btn-default btn-lg" onclick="location.href='/ebb/userList.do'">회원 관리</button>
+	<div style="margin-bottom: 20px;">
+		<button type="button" class="btn btn-default btn-lg"onclick="location.href='/ebb/main/main.html'">메인</button>
+		<button type="button" class="btn btn-default btn-lg">환불 관리</button>
+		<button type="button" class="btn btn-default btn-lg">예약 관리</button>
+		<button type="button" class="btn btn-default btn-lg" onclick="location.href='/ebb/userList.do'">회원 관리</button>
+		<button type="button" class="btn btn-default btn-lg" onclick="location.href='/ebb/categoryList.do'">카테고리 관리</button>
+	</div>
 </body>
 </html>

@@ -15,11 +15,13 @@ CREATE TABLE E_USER(
     uADDRESS VARCHAR2(50) DEFAULT '없음', --주소
     uEMERG VARCHAR2(20) DEFAULT '없음', -- 회원가입시 기재칸 X
     uTYPE NUMBER(1) DEFAULT 0, --회원등급 : 0 일반(guest)/1 호스트(host)/2 관리자(admin)
-    uBIRTH VARCHAR2(20) DEFAULT '없음'
+    uBIRTH VARCHAR2(20) DEFAULT '없음',
+    uRDATE DATE DEFAULT SYSDATE,		--가입일
+    uDROP NUMBER(1) DEFAULT 0		--탈퇴여부
 );
 
 INSERT INTO E_USER(uIDX, userID, uPW, uNAME, uPHONE, uEMERG, uTYPE) 
-VALUES (seq_uidx.nextval, 'admin', '1', '관리자', '010-1111-1111', '010-1222-1222', 0);
+VALUES (seq_uidx.nextval, 'admin', '1', '관리자', '010-1111-1111', '010-1222-1222', 2);
 INSERT INTO E_USER(uIDX, userID, uPW, uNAME, uPHONE, uEMERG, uTYPE) 
 VALUES (seq_uidx.nextval, 'aaa', 'aaa', '홍길동', '010-2222-1111', '010-2222-1222', 1);
 INSERT INTO E_USER(uIDX, userID, uPW, uNAME, uPHONE, uEMERG, uTYPE) 

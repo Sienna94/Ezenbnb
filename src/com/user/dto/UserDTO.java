@@ -10,6 +10,8 @@ public class UserDTO {
 	private String uemerg;
 	private int utype;
 	private String ubirth;
+	private String urdate;
+	private int udrop;
 
 	public UserDTO() {
 		super();
@@ -92,6 +94,22 @@ public class UserDTO {
 
 	public void setUbirth(String ubirth) {
 		this.ubirth = ubirth;
+	}
+
+	public String getUrdate() {
+		return urdate;
+	}
+
+	public void setUrdate(String urdate) {
+		this.urdate = urdate;
+	}
+
+	public int getUdrop() {
+		return udrop;
+	}
+
+	public void setUdrop(int udrop) {
+		this.udrop = udrop;
 	}
 
 }
