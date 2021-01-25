@@ -111,3 +111,25 @@
 #Lightning{
 	color: yellow;
 }
+.wrap_review{
+	margin: auto;
+	width: 70%;
+	background: aqua;
+	margin:auto;
+}
+#wrap_review2{
+	width:100%;
+	display: inline-block;
+}
+#wrap_review3{
+	width: 60%;
+	float: left;
+}
+#wrap_review4{
+	width: 40%;
+	background: fuchsia;
+	float:right; 
+}
+#grade>svg{
+	color: yellow;
+}

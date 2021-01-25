@@ -24,12 +24,12 @@
 					<li role="presentation"><a href="/ebb/user/guest/travel.jsp">예약</a></li>
 					<li role="presentation"><a href="/ebb/user/guest/travel.jsp">달력</a></li>
 					<li role="presentation"><a href="house.jsp">숙소</a></li>
-					<li role="presentation"><a href="performance.jsp">실적</a></li>
+					<li role="presentation"><a href="review.jsp">실적</a></li>
 				</ul>
 			</div>
 		</div>
 		<div id="menu2">
-			<button type="button" class="btn">숙소 등록하기</button>
+			<button type="button" class="btn" onclick="location.href='enroll.jsp'">숙소 등록하기</button>
 			<div class="dropdown">
 				<button class="btn btn-default dropdown-toggle" type="button"
 					id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
