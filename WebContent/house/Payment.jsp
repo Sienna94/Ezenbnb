@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <style>
 input[type=text], select {
-  width: 100%;
+  width: 500px;
   padding: 12px 0px;
   margin: 8px 0;
   display: inline-block;
@@ -17,7 +17,7 @@ input[type=text], select {
 }
 
 input[type=submit] {
-  width: 100%;
+  width: 500px;
   background-color: #4CAF50;
   color: white;
   padding: 14px 0px;
@@ -38,13 +38,43 @@ div {
 }
 
 form div {
-  padding: 20px 0px;
+  padding: 10px 0px 0px 0px;
 }
 
 h3 {
   margin:0px;
 }
+
+label {
+	display: block;
+	width: 300px;
+}
 </style>
+<script>
+	function checkWrite(){
+	   if(document.inputForm.card.value=="none") {
+	       alert("카드회사를 입력하세요");
+	       inputForm.card.focus();
+	   }else if(document.inputForm.cardnum.value==""){ 
+	       alert("카드번호를 입력하세요");
+	       inputForm.cardnum.focus();
+	   }else if(document.inputForm.exdate.value==""){ 
+		   alert("만료일을 입력하세요");
+		   inputForm.exdate.focus();
+	   }else if(document.inputForm.cvv.value==""){ 
+		   alert("cvv번호를 입력하세요");
+		   inputForm.cvv.focus();
+	   }else if(document.inputForm.postnum.value==""){ 
+		   alert("우편번호를 입력하세요");
+		   inputForm.postnum.focus();
+	   }else if(document.inputForm.area.value==""){ 
+		   alert("지역을 입력하세요");
+		   inputForm.area.focus();
+	   }else{
+	   	   document.inputForm.submit(); 
+	   }
+	}
+</script>
 </head>
 <body>
 <div>
@@ -68,7 +98,7 @@ h3 {
 <div>
 	<hr style="width:500px; margin-left:0px;">
 	<h2>결제수단</h2>
-	<form action="/ebb/payment.do?" method="post">	
+	<form name="inputForm" action="/ebb/payment.do?" method="post">	
 		<select name="card" >
 		  <option value="none">신용카드 또는 체크카드</option>
 		  <option value="sol">신한은행</option>
@@ -106,7 +136,7 @@ h3 {
 	        <input type="text" name="person" id="person" value="${param.person}" />
 	   	</div>
 	  	<div>
-	        <button type="submit">예약신청하기</button>
+	        <button type="button" onclick="checkWrite()">예약신청하기</button>
 	   	</div>
 	</form>
 </div>
