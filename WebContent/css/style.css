@@ -11,7 +11,7 @@ header {
   width: 100%;
   height: 80px;
   line-height: 80px;
-  overflow: hidden;
+  /* overflow: hidden; */
   background: #fff;
 }
 .menu_group {
@@ -51,6 +51,12 @@ header {
   justify-content: space-around;
   min-width: 170px;
   /* background-color: yellow; */
+}
+/* 드롭다운 목록 CSS */
+.dropdown-menu li{
+	height:40px;
+	line-height:40px;
+	background-color: #fff;
 }
 /* /header */
 

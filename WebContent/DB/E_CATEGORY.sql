@@ -7,6 +7,7 @@ CREATE TABLE E_CATEGORY(
 );
 
 create sequence seq_cidx nocache nocycle;
---drop sequence seq_hidx;
+--drop sequence seq_cidx;
+--drop table E_CATEGORY;
 
 INSERT INTO E_CATEGORY(cIDX, cNAME) VALUES (seq_cidx.nextval, '경기도');
