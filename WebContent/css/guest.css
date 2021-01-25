@@ -1,15 +1,34 @@
 @charset "EUC-KR";
 
+@font-face {
+	src: url("../fonts/AirbnbCereal-Medium.ttf");
+	font-family: "cereal"
+}
+
 .upperMenu {
 	display: inline-block;
-	height: 100px;
+	height: 80px;
 	width: 100%;
-	background: aqua;
+	padding-bottom:10px;
+	border-bottom: 2px solid #bcbcbc;
+}
+
+#logo {
+	margin-left: 20px;
+	font-family: "cereal";
+	color: rgb(255, 56, 92);
+	float: left;
+}
+
+#logo>img {
+	width: 30px;
+	height: 40px;
 }
 
 .wrap {
 	float: right;
 	margin-right: 100px;
+	margin-top: 27px;
 }
 
 .wrap_like {
@@ -19,7 +38,7 @@
 .wrap_like1 {
 	display: inline-block;
 	width: 40%;
-	height:100%;
+	height: 100%;
 	background: gray;
 }
 
@@ -45,65 +64,101 @@
 }
 
 #wrap_item2 {
-	height:100%;
+	height: 100%;
 	background: green;
 	float: right;
 }
 
 #like {
-	text-align:right;
+	text-align: right;
 	height: 90%;
 	color: red;
-	background:lime;
+	background: lime;
 }
+
 #price {
 	height: 10%;
 }
-.map{
-	width : 60px;
-	height:100%;
-	background:blue;
+
+.map {
+	width: 60px;
+	height: 100%;
+	background: blue;
 }
-#wrap_ac{
+
+#wrap_ac {
 	text-align: center;
 }
-.wrap_account{
-	display: inline-block;
-	width:70%;
-	margin: auto;
-	text-align:left;
-	background: aqua;
-}
-.wrap_account1{
-	margin:15px;
-	float:left;
-	width:30%;
-	background: fuchsia;
-}
-.panel-body>.content{
-	height:60px;
-}
-#wrap_personal{
+
+.wrap_account {
 	display: inline-block;
 	width: 70%;
-	margin-left:15%;
-	margin-right:15%;
+	margin: auto;
+	text-align: left;
+	background: aqua;
+}
+
+.wrap_account1 {
+	margin: 15px;
+	float: left;
+	width: 30%;
 	background: fuchsia;
 }
-.wrap_pers{
+
+.panel-body>.content {
+	height: 60px;
+}
+
+#wrap_personal {
+	display: inline-block;
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	background: fuchsia;
+}
+
+.wrap_pers {
 	float: left;
-	width:70%;
-	margin :auto;
+	width: 70%;
+	margin: auto;
 	background: gray;
 }
-.wrap_pers2{
-	margin:20px;
+
+.wrap_pers2 {
+	margin: 20px;
 }
-.wrap_pers2>input{
-	width:300px;
+
+.wrap_pers2>input {
+	width: 300px;
 }
-.wrap_pers3{
-	width:30%;
+
+.wrap_pers3 {
+	width: 30%;
+	float: right;
+	background: maroon;
+}
+
+#wrap_security {
+	display: inline-block;
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	background: fuchsia;
+}
+
+.wrap_security1 {
+	float: left;
+	width: 70%;
+	margin: auto;
+	background: gray;
+}
+
+.wrap_security2 {
+	margin: 10px;
+}
+
+.wrap_security3 {
+	width: 30%;
 	float: right;
 	background: maroon;
 }

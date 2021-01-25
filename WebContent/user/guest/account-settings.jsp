@@ -3,7 +3,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:import url="guestmenu.jsp" />
 
-
 <div id="wrap_ac">
 	<div class="wrap_account">
 		<h2>계정</h2>
@@ -21,7 +20,7 @@
 		<div class="wrap_account1">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<h3><a>로그인 및 보안</a></h3>
+					<h3><a href="security.jsp">로그인 및 보안</a></h3>
 					<div class="content">비밀번호를 변경하고 계정을 안전하게 보호하세요</div>
 				</div>
 			</div>
@@ -35,9 +34,6 @@
 			</div>
 		</div>
 	</div>
-
 </div>
-
-
 </body>
 </html>

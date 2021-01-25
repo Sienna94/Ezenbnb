@@ -16,7 +16,7 @@
 <body>
 	<div class="upperMenu">
 		<div id="menu1">
-			<h3 id="tit">ezenbnb</h3>
+			<div id="logo"><h3><img alt="" src="/ebb/img/logo.png">ezenbnb</h3></div>
 			<div id="tab">
 				<ul class="nav nav-tabs">
 					<li role="presentation"><a href="hostmain.jsp">홈</a></li>
