@@ -40,7 +40,7 @@
 					<li role="presentation"><a role="menuitem" tabindex="-1"
 						href="#">프로필</a></li>
 					<li role="presentation"><a role="menuitem" tabindex="-1"
-						href="#">계정</a></li>
+						href="/ebb/user/guest/account-settings.jsp">계정</a></li>
 					<li role="presentation"><a role="menuitem" tabindex="-1"
 						href="#">대금 수령 내역</a></li>
 					<li class="divider"></li>
@@ -48,9 +48,9 @@
 						href="#">새로운 숙소 추가</a></li>
 					<li class="divider"></li>
 					<li role="presentation"><a role="menuitem" tabindex="-1"
-						href="#">게스트 모드로 전환</a></li>
+						href="/ebb/main/main.html">게스트 모드로 전환</a></li>
 					<li role="presentation"><a role="menuitem" tabindex="-1"
-						href="#">로그아웃</a></li>
+						href="/ebb/main/main.html">로그아웃</a></li>
 				</ul>
 			</div>
 		</div>

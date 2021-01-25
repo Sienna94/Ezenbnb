@@ -63,5 +63,47 @@
 	width : 60px;
 	height:100%;
 	background:blue;
-	
+}
+#wrap_ac{
+	text-align: center;
+}
+.wrap_account{
+	display: inline-block;
+	width:70%;
+	margin: auto;
+	text-align:left;
+	background: aqua;
+}
+.wrap_account1{
+	margin:15px;
+	float:left;
+	width:30%;
+	background: fuchsia;
+}
+.panel-body>.content{
+	height:60px;
+}
+#wrap_personal{
+	display: inline-block;
+	width: 70%;
+	margin-left:15%;
+	margin-right:15%;
+	background: fuchsia;
+}
+.wrap_pers{
+	float: left;
+	width:70%;
+	margin :auto;
+	background: gray;
+}
+.wrap_pers2{
+	margin:20px;
+}
+.wrap_pers2>input{
+	width:300px;
+}
+.wrap_pers3{
+	width:30%;
+	float: right;
+	background: maroon;
 }

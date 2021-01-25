@@ -30,8 +30,8 @@
 					<li><a href="travel.jsp">여행</a></li>
 					<li><a href="like.jsp">저장목록</a></li>
 					<li class="divider"></li>
-					<li><a href="#">숙소 관리</a></li>
-					<li><a href="#">계정</a></li>
+					<li><a href="/ebb/host/hostmain.jsp">숙소 관리</a></li>
+					<li><a href="account-settings.jsp">계정</a></li>
 					<li class="divider"></li>
 					<li><a href="#">도움말</a></li>
 					<li><a href="#">로그아웃</a></li>
