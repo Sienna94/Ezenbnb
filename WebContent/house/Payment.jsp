@@ -42,7 +42,11 @@ form div {
 }
 
 h3 {
-  margin:0px;
+  margin: 0px;
+}
+
+div p {
+  margin: 5px 0px 10px;
 }
 
 label {
@@ -84,16 +88,16 @@ label {
 	<hr style="width:500px; margin-left:0px;">
 	<h2>예약정보</h2>
 	<h3>체크인</h3>
-	<span>${param.checkin}</span>
+	<p>${param.checkin}</p>
 	<h3>체크아웃</h3>
-	<span>${param.checkout}</span>
+	<p>${param.checkout}</p>
 	<h3>인원</h3>
-	<span>${param.person}</span>
+	<p>${param.person}</p>
 	
 	<hr style="width:500px; margin-left:0px;">
 	<h2>요금정보</h2>
 	<h3>결제요금</h3>
-	<span>${param.price}</span>
+	<p>${param.price}</p>
 </div>
 <div>
 	<hr style="width:500px; margin-left:0px;">

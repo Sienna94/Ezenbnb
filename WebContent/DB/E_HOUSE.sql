@@ -21,12 +21,27 @@ CREATE TABLE E_HOUSE(
 create sequence seq_hidx  nocache nocycle;
 --drop sequence seq_hidx;
 
+--truncate table E_HOUSE;
+
 --시퀀스 맴버 방이름 주소 전화번호 이미지 편의시설 가격 침대 화장실 인원수
 INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
-VALUES (seq_hidx.nextval, 1, '보라매가든', '파주시', '010-1111-1111', 'house1.jpg', '족구장', 300000, 2, 2, 5);
+VALUES (seq_hidx.nextval, 1, '보라매가든1', '파주시', '010-1111-1111', 'house1.jpg', '족구장1', 300001, 2, 2, 5);
 INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
-VALUES (seq_hidx.nextval, 2, '진달래가든', '서울시', '010-2222-2222', 'house2.jpg', '매점', 360000, 3, 2, 7);
+VALUES (seq_hidx.nextval, 2, '보라매가든2', '파주시', '010-1111-1112', 'house1.jpg', '족구장2', 300002, 2, 2, 6);
 INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
-VALUES (seq_hidx.nextval, 3, '장미가든', '부산시', '010-3333-3333', 'house3.jpg', '수영장', 450000, 4, 3, 10);
+VALUES (seq_hidx.nextval, 3, '보라매가든3', '파주시', '010-1111-1113', 'house1.jpg', '족구장3', 300003, 2, 2, 7);
 
---SELECT * FROM E_HOUSE WHERE hIDX = '2'
+INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
+VALUES (seq_hidx.nextval, 4, '진달래가든1', '서울시', '010-2222-2221', 'house2.jpg', '매점1', 360001, 3, 2, 4);
+INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
+VALUES (seq_hidx.nextval, 5, '진달래가든2', '서울시', '010-2222-2222', 'house2.jpg', '매점2', 360002, 3, 2, 5);
+INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
+VALUES (seq_hidx.nextval, 6, '진달래가든3', '서울시', '010-2222-2223', 'house2.jpg', '매점3', 360003, 3, 2, 6);
+
+INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
+VALUES (seq_hidx.nextval, 7, '장미가든1', '부산시', '010-3333-3331', 'house3.jpg', '수영장1', 450001, 4, 3, 10);
+INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
+VALUES (seq_hidx.nextval, 8, '장미가든2', '부산시', '010-3333-3332', 'house3.jpg', '수영장2', 450002, 4, 3, 9);
+INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
+VALUES (seq_hidx.nextval, 9, '장미가든3', '부산시', '010-3333-3333', 'house3.jpg', '수영장3', 450003, 4, 3, 8);
+

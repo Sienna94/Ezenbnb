@@ -41,6 +41,14 @@ form div {
   padding: 10px 0px 0px 0px;
 }
 
+h3 {
+  margin:0px;
+}
+
+div p {
+  margin: 5px 0px 10px;
+}
+
 label {
 	display: block;
 	width: 300px;
@@ -81,33 +89,33 @@ ${dto.getHutill()}<br> --%>
 <div>
 	<hr style="width:500px; margin-left:0px;">
 	<h2>방정보</h2>
-	<h3 style="margin:0px;">숙소이름</h3>
-	<span>${dto.getHname()}</span>
-	<h3 style="margin:0px;">숙소주소</h3>
-	<span>${dto.getHaddress()}</span>
-	<h3 style="margin:0px;">전화번호</h3>
-	<span>${dto.getHphone()}</span>
-	<h3 style="margin:0px;">방가격</h3>
-	<span>${dto.getHprice()}</span>
+	<h3>숙소이름</h3>
+	<p>${dto.getHname()}</p>
+	<h3>숙소주소</h3>
+	<p>${dto.getHaddress()}</p>
+	<h3>전화번호</h3>
+	<p>${dto.getHphone()}</p>
+	<h3>방가격</h3>
+	<p>${dto.getHprice()}</p>
 	
 </div>
 <div>
 	<hr style="width:500px; margin-left:0px;">
 	<h2>기타정보</h2>
-	<h3 style="margin:0px;">침대갯수</h3>
-	<span>${dto.getHbed()} 개</span> 
-	<h3 style="margin:0px;">화장실수</h3>
-	<span>${dto.getHbat()} 개</span>
-	<h3 style="margin:0px;">수용인원</h3>
-	<span>${dto.getHperson()} 명</span> 
-	<h3 style="margin:0px;">편의시설</h3>
-	<span>${dto.getHfacility()}</span>
+	<h3>침대갯수</h3>
+	<p>${dto.getHbed()} 개</p> 
+	<h3>화장실수</h3>
+	<p>${dto.getHbat()} 개</p>
+	<h3>수용인원</h3>
+	<p>${dto.getHperson()} 명</p> 
+	<h3>편의시설</h3>
+	<p>${dto.getHfacility()}</p>
 </div>
 <div>
 	<hr style="width:500px; margin-left:0px;">
 	<h2>평점</h2>
-	<h3 style="margin:0px;">평점</h3>
-	<span>${dto.getHgrade()} 점</span>
+	<h3>평점</h3>
+	<p>${dto.getHgrade()} 점</p>
 </div>
 <div>
 	<hr style="width:500px; margin-left:0px;">
