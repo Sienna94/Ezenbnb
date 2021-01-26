@@ -15,9 +15,9 @@ public class CategoryInsert implements CommandAction {
 		String name = request.getParameter("name");
 		
 		CategoryDTO cdto = new CategoryDTO();
-		cdto.setcName(name);
+		cdto.setCname(name);
 		
-		System.out.println("카테고리 : " + cdto.getcName());
+		System.out.println("카테고리 : " + cdto.getCname());
 		
 		CategoryDAO cdao = new CategoryDAO();
 		int n = cdao.categoryInsert(cdto);

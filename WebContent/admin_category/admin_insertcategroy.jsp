@@ -11,8 +11,6 @@
 		<td><input type="text"></td>
 		<td><button type="button">추가하기</button></td>
 	</tr>
-	
-	
 </table>
 </body>
 </html>

@@ -1,33 +1,32 @@
 package com.category.dto;
 
 public class CategoryDTO {
-	private int cIDX;
-	private String cName;
+	private int cidx;
+	private String cname;
 
 	public CategoryDTO() {
 		super();
 	}
 
-	public CategoryDTO(int cIDX, String cName) {
+	public CategoryDTO(int cidx, String cname) {
 		super();
-		this.cIDX = cIDX;
-		this.cName = cName;
+		this.cidx = cidx;
+		this.cname = cname;
 	}
 
-	public int getcIDX() {
-		return cIDX;
+	public int getCidx() {
+		return cidx;
 	}
 
-	public void setcIDX(int cIDX) {
-		this.cIDX = cIDX;
+	public void setCidx(int cidx) {
+		this.cidx = cidx;
 	}
 
-	public String getcName() {
-		return cName;
+	public String getCname() {
+		return cname;
 	}
 
-	public void setcName(String cName) {
-		this.cName = cName;
+	public void setCname(String cname) {
+		this.cname = cname;
 	}
-
 }
