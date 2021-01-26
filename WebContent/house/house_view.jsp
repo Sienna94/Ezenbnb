@@ -53,6 +53,13 @@ label {
 	display: block;
 	width: 300px;
 }
+
+img {
+	border-radius: 7px;
+	width: 600px;
+	height: 400px;
+	border: 0;
+}
 </style>
 <script>
 	function checkWrite(){
