@@ -7,12 +7,12 @@
 	<div class="wrap_account">
 		<h2>계정</h2>
 		<div>
-			<span>user name, user email</span> <strong><a>프로필로 이동 </a></strong>
+			<span>${gName}, ${gId}</span> <strong><a>프로필로 이동 </a></strong>
 		</div>
 		<div class="wrap_account1">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<h3><a href="personal-info.jsp">개인정보</a></h3>
+					<h3><a href="/ebb/personalinfo.do?id=${gId}">개인정보</a></h3>
 					<div class="content">개인 정보 및 연락처를 알려주세요</div>
 				</div>
 			</div>
