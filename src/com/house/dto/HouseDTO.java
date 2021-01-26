@@ -4,10 +4,11 @@ public class HouseDTO {
 	private int hidx;
 	private int midx;
 	private String hname;
+	private String hcatg;
 	private String haddress;
 	private String hphone;
 	private String himage;
-	private String hfacility;
+	private String hfacility; //시설
 	private int hgrade;
 	private int hbed;
 	private int hbat;
@@ -17,12 +18,13 @@ public class HouseDTO {
 	public HouseDTO() {
 		super();
 	}
-	public HouseDTO(int hidx, int midx, String hname, String haddress, String hphone, String himage, String hfacility,
-			int hgrade, int hbed, int hbat, int hperson, int hprice, int hutill) {
+	public HouseDTO(int hidx, int midx, String hname, String hcatg, String haddress, String hphone, String himage,
+			String hfacility, int hgrade, int hbed, int hbat, int hperson, int hprice, int hutill) {
 		super();
 		this.hidx = hidx;
 		this.midx = midx;
 		this.hname = hname;
+		this.hcatg = hcatg;
 		this.haddress = haddress;
 		this.hphone = hphone;
 		this.himage = himage;
@@ -51,6 +53,12 @@ public class HouseDTO {
 	}
 	public void setHname(String hname) {
 		this.hname = hname;
+	}
+	public String getHcatg() {
+		return hcatg;
+	}
+	public void setHcatg(String hcatg) {
+		this.hcatg = hcatg;
 	}
 	public String getHaddress() {
 		return haddress;
@@ -112,4 +120,5 @@ public class HouseDTO {
 	public void setHutill(int hutill) {
 		this.hutill = hutill;
 	}
+	
 }

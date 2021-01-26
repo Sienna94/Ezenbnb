@@ -2,6 +2,7 @@ package com.house.dao;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -31,5 +32,13 @@ public class HouseDAO {
 		HouseDTO dto = session.selectOne("mybatis.HouseMapper.getHouseOne", hidx);
 		session.close();
 		return dto;	
+	}
+
+	//카테고리별 방 목록 가져오기
+	public List<HouseDTO> getHouseList(String catg) {
+		SqlSession session = factory.openSession();
+		List<HouseDTO> list = session.selectList("mybatis.HouseMapper.getHouseList", catg);
+		session.close();
+		return list;
 	}
 }

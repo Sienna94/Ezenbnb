@@ -9,4 +9,10 @@
 	         WHERE hIDX=#{hidx}
      	]]>
 	</select>
+	<select id="getHouseList" parameterType="java.lang.String" resultType="HouseDTO">
+		<![CDATA[
+	         SELECT * FROM E_HOUSE
+	         WHERE hCATG LIKE #{catg}
+     	]]>
+	</select>
 </mapper>

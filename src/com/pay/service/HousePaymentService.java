@@ -49,7 +49,7 @@ public class HousePaymentService implements CommandAction {
 		
 		request.setAttribute("n", n);
 		
-		return "/house/house_view_index.jsp";
+		return "/main/main.jsp";
 	}
 
 }

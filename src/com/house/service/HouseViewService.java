@@ -12,7 +12,8 @@ public class HouseViewService implements CommandAction {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-
+		response.setCharacterEncoding("UTF-8");
+		
 		String hidx = request.getParameter("hidx");
 		
 		HouseDAO dao = new HouseDAO(); 

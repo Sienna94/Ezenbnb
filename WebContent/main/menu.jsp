@@ -9,8 +9,8 @@
     <!-- 부트스트랩보다 jquery가 밑에 있으면 동작안함 -->
     <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/ebb/js/script.js"></script>
-    <link rel="stylesheet" href="../css/reset.css" type="text/css" />
-    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/ebb/css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="/ebb/css/style.css" type="text/css" />
   </head>
 
   <body>
@@ -19,11 +19,11 @@
         <div class="menu_group">
           <div class="logo">
             <a href="/ebb/main/main.jsp">
-              <img src="../img/category_sample1.jpg" alt="logo" />
+              <img src="/ebb/img/category_sample1.jpg" alt="logo" />
             </a>
           </div>
           <div class="search">
-            <form action="../index.jsp" method="POST">
+            <form action="/ebb/index.jsp" method="POST">
               <input
                 type="text"
                 id="input"

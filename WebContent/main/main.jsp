@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:import url="menu.jsp" />
+<c:import url="/main/menu.jsp" />
       <article>
         <div class="main_bg"></div>
       </article>
@@ -65,21 +65,21 @@
         <div class="category">
           <h1>어디에서나, 여행은 살아보는 거야!</h1>
           <div class="lodge">
-            <img src="../img/house/house1.jpg" alt="lodge1" />
+            <img src="/ebb/img/house/house1.jpg" alt="lodge1" />
             <div class="lodge_explan">
               <span>방갈로</span>
             </div>
           </div>
           <!-- /lodge -->
           <div class="lodge">
-            <img src="../img/house/house1.jpg" alt="lodge1" />
+            <img src="/ebb/img/house/house1.jpg" alt="lodge1" />
             <div class="lodge_explan">
               <span>방갈로</span>
             </div>
           </div>
           <!-- /lodge -->
           <div class="lodge">
-            <img src="../img/house/house1.jpg" alt="lodge1" />
+            <img src="/ebb/img/house/house1.jpg" alt="lodge1" />
             <div class="lodge_explan">
               <span>방갈로</span>
             </div>
