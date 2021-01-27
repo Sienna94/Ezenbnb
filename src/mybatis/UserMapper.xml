@@ -4,10 +4,17 @@
 
 <mapper namespace="mybatis.UserMapper">
 	<!-- 로그인(계정찾기) -->
-	<select id="getUser" parameterType="UserDTO" resultType="UserDTO">
+	<select id="getUser" parameterType="UserDTO"
+		resultType="UserDTO">
 		<![CDATA[
 	         SELECT * FROM E_USER WHERE userID=#{userid} AND uPW=#{upw}
      	]]>
+	</select>
+	<select id="getAutoLoginUser" parameterType="UserDTO"
+		resultType="UserDTO">
+		<![CDATA[
+			SELECT * FROM E_USER WHERE userID=#{mid}
+		]]>
 	</select>
 	<!-- 회원 등록 -->
 	<insert id="insertUser" parameterType="UserDTO">
@@ -16,12 +23,12 @@
 			VALUES (seq_uidx.nextval, #{userid}, #{upw}, #{uname}, #{ubirth})
 		]]>
 	</insert>
-		
+
 	<!-- 회원 리스트 -->
-	<select id="getUserList"  resultType="UserDTO">
+	<select id="getUserList" resultType="UserDTO">
 		<![CDATA[
 			SELECT * FROM E_USER
 		]]>
 	</select>
-	
+
 </mapper>

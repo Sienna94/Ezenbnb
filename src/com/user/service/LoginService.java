@@ -30,13 +30,13 @@ public class LoginService implements CommandAction{
 			
 			//로그인 유지처리
             if(loginChk != null){
-                Cookie cookie = new Cookie("id", userid);
+                Cookie cookie = new Cookie("cid", userid);
                 cookie.setMaxAge(60);
                 cookie.setPath("/");
                 response.addCookie(cookie);
             }
             System.out.println("로그인 성공/ 아이디:" + userid);
-			return "index.jsp";
+			return "main/main.jsp";
 		}else {
 			session.setAttribute("logFail","아이디 혹은 패스워드를 잘못 입력되었습니다");
 			return "user/login.jsp";

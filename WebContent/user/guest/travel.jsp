@@ -17,7 +17,7 @@
 		<img alt="" src="/ebb/img/guestbg.png">
 	</div>
 	<div>
-		<button type="button" class="btn" onclick="location.href='/ebb/main/main.html'">이젠비앤비 둘러보기</button>
+		<button type="button" class="btn" onclick="location.href='/ebb/main/main.jsp'">이젠비앤비 둘러보기</button>
 	</div>
 	<div>
 		<span>예약 내역을 찾으실 수 없나요?</span><a>도움말 센터를 방문하세요</a>

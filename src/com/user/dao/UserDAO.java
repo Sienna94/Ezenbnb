@@ -34,6 +34,15 @@ public class UserDAO {
 		return entity;
 	}
 
+	// 자동 로그인 ------------------------------------------------------------------
+	public UserDTO getAutoLoginUser(String id) {
+		SqlSession session = factory.openSession();
+		UserDTO entity = session.selectOne("mybatis.UserMapper.getAutoLoginUser", id);
+		session.close();
+
+		return entity;
+	}
+
 	// 회원가입 -----------------------------------------------------------------
 	public int registration(UserDTO dto) {
 		SqlSession session = factory.openSession();
