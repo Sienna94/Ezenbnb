@@ -22,6 +22,7 @@
 		<tr>
 			<th align="center">번호</th>
 			<th align="center">카테고리 명</th>
+			<th align="center">삭제</th>
 		</tr>
 
 		<c:if test="${!empty clist}">
@@ -29,10 +30,13 @@
 				<tr>
 					<td align="left">${ob.getCidx()}</td>
 					<td align="left">${ob.getCname()}</td>
+					<td><input type="checkbox"></td>
 				</tr>
 			</c:forEach>
 		</c:if>
 	</table>
+	<form action="ebb/categorydelete.do"></form>
+	<button type="button">삭제하기</button>
 </div>
 
 </body>

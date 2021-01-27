@@ -3,14 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file="../admin/admin_menu.jsp"%>
 
-<h2>카테고리 추가하기</h2>
+<body onload="alert('삭제되었습니다'); location.href='/ebb/getCategoryList.do'">
 
-<table>
-	<tr>
-		<td>추가할 카테고리</td>
-		<td><input type="text"></td>
-		<td><button type="button">추가하기</button></td>
-	</tr>
-</table>
 </body>
 </html>

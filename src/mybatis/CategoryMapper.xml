@@ -17,5 +17,12 @@
 			INSERT INTO E_CATEGORY(cIDX, cNAME) VALUES (seq_cidx.nextval, #{cname})
 		]]>
 	</insert>
+	
+		<!-- 카테고리 삭제 -->
+	<delete id="categoryDelete" parameterType="CategoryDTO">
+	    <![CDATA[
+	         DELETE E_CATEGORY WHERE cNAME=#{cname}
+	    ]]>
+	    </delete>
 
 </mapper>
