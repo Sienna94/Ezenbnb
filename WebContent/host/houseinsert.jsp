@@ -3,7 +3,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:import url="hostmenu.jsp" />
 
-<form action="/ebb/houseinsert.do" method="POST">
+<!-- <form action="/ebb/houseinsert.do" method="POST"> -->
+<form method="post" action="/ebb/houseinsert.do" enctype="multipart/form-data"> 
 	<div class="wrap_enroll">
 		<h3>님 안녕하세요! 숙소 등록을 시작해볼까요?</h3>
 		<div class="wrap_enroll2">
@@ -110,23 +111,47 @@
 					}
 				</script>
 			</div>
-		</div>
-		<div class="wrap_enroll2">
 			<h5>숙소의 연락처를 알려주세요.</h5>
 			<div class="input-group input-group-lg">
 				<input name="hphone" type="text" class="form-control"
 					placeholder="예)01012345678" aria-describedby="sizing-addon1">
 			</div>
-			<h5>숙소 이미지를 등록해주세요.</h5>
-			<input id="file" name="himage" type="file">
+		</div>
+		<div class="wrap_enroll3">
 
+			<h5>숙소 이미지를 등록해주세요.</h5>
+		<!-- 	<input id="file" name="himage" type="file"> -->
+			<!-- 이미지 썸네일 -->
+			<div class="inputArea">
+				<label for="gdsImg">이미지</label>
+				 
+				<input type="file" id="uploadFile" name="uploadFile" />
+				<div class="select_img">
+					<img src="" />
+				</div>
+
+				<script>
+					$("#uploadFile").change(
+							function() {
+								if (this.files && this.files[0]) {
+									var reader = new FileReader;
+									reader.onload = function(data) {
+										$(".select_img img").attr("src",
+												data.target.result).width(500);
+									}
+									reader.readAsDataURL(this.files[0]);
+								}
+							});
+				</script>
+				<%=request.getRealPath("/") %>
+			</div>
+		</div>
+		<div class="wrap_enroll2">
 			<h5>숙소에는 어떤 편의시설이 있나요?</h5>
 			<div class="input-group input-group-lg">
 				<input name="hfacility" type="text" class="form-control"
 					placeholder="예)족구장" aria-describedby="sizing-addon1">
 			</div>
-		</div>
-		<div class="wrap_enroll2">
 			<h5>숙소에 침대는 몇개가 있나요?</h5>
 			<select class="count" name="hbed">
 				<option value="0" selected="selected">개</option>

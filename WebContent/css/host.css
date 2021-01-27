@@ -168,10 +168,8 @@
 }
 
 .wrap_enroll {
-	margin-left: 5%;
-	margin-right: 5%;
 	display: inline-block;
-	width: 90%;
+	width: 100%;
 	height: 100%;
 	display: inline-block;
 }
@@ -179,6 +177,12 @@
 .wrap_enroll2 {
 	margin-top: 50px;
 	width: 30%;
+	float: left;
+	padding-left: 50px;
+}
+.wrap_enroll3{
+	margin-top: 50px;
+	width: 40%;
 	float: left;
 }
 
@@ -191,4 +195,7 @@
 	width: 250px;
 	height: 46px;
 	margin-top: 20px;
+}
+.select_img img{
+	margin:20px 0;
 }

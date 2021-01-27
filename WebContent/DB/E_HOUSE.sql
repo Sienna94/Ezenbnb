@@ -1,6 +1,7 @@
 select * from tab;
 select * from E_HOUSE;
---drop table E_HOUSE;
+drop table E_HOUSE;
+drop sequence seq_hidx;
 
 CREATE TABLE E_HOUSE(
     hIDX NUMBER(5) PRIMARY KEY, --숙소번호
@@ -20,7 +21,7 @@ CREATE TABLE E_HOUSE(
 );
 
 create sequence seq_hidx  nocache nocycle;
---drop sequence seq_hidx;
+
 
 --truncate table E_HOUSE;
 
