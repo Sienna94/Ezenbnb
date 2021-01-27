@@ -38,8 +38,8 @@ public class LoginService implements CommandAction{
             System.out.println("로그인 성공/ 아이디:" + userid);
 			return "main/main.jsp";
 		}else {
-			session.setAttribute("logFail","아이디 혹은 패스워드를 잘못 입력되었습니다");
-			return "user/login.jsp";
+			session.setAttribute("logFail","아이디 혹은 패스워드가 잘못 입력되었습니다");
+			return "user/login/login.jsp";
 		}
 	}
 }

@@ -6,13 +6,10 @@
 <!-- <form action="/ebb/houseinsert.do" method="POST"> -->
 <form method="post" action="/ebb/houseinsert.do" enctype="multipart/form-data"> 
 	<div class="wrap_enroll">
-		<h3>님 안녕하세요! 숙소 등록을 시작해볼까요?</h3>
+		<h3>${logOK.getUname()}님 안녕하세요! 숙소 등록을 시작해볼까요?</h3>
 		<div class="wrap_enroll2">
-			<h5>임시 : 회원번호</h5>
-			<div class="input-group input-group-lg">
-				<input name="midx" type="text" class="form-control"
-					aria-describedby="sizing-addon1">
-			</div>
+				<input name="midx" type="hidden" class="form-control"
+					placeholder="${logOK.getUidx()}" aria-describedby="sizing-addon1">
 			<h5>숙소의 이름은 무엇인가요?</h5>
 			<div class="input-group input-group-lg">
 				<input name="hname" type="text" class="form-control"
@@ -143,7 +140,7 @@
 								}
 							});
 				</script>
-				<%=request.getRealPath("/") %>
+				<%-- <%=request.getRealPath("/") %> --%>
 			</div>
 		</div>
 		<div class="wrap_enroll2">

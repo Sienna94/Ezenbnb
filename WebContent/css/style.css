@@ -63,7 +63,7 @@ header {
 /* article */
 .main_bg {
   margin-top: 80px;
-  background-image: url(../img/testbg.jpg);
+  background-image: url(../img/mainbg.png);
   background-position: center;
   height: 800px;
   overflow: hidden;

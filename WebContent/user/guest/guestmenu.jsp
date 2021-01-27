@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="com.user.dao.UserDAO"%>
@@ -20,7 +21,7 @@
 </head>
 <body>
 	<!-- 로그인유지 -->
-	<%--   	<%
+    <%
     Cookie[] cookies = request.getCookies();
     if(cookies !=null){
         for(Cookie tempCookie : cookies){
@@ -30,10 +31,11 @@
                 UserDAO dao=new UserDAO();
                 UserDTO entity= dao.getAutoLoginUser(id);
                 session.setAttribute("logOK", entity);
+                /* System.out.println(entity.getUname()); */
             }
         }
     }  	
-  	%> --%>
+  	%> 	
 	<div class="upperMenu">
 		<div id="logo">
 			<h3>
@@ -46,7 +48,7 @@
 			<div class="btn-group">
 				<button type="button" class="btn btn-default dropdown-toggle"
 					data-toggle="dropdown" aria-expanded="false">
-					menu <span class="caret"></span>
+					☰ <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu">
 					<li><a href="inbox.jsp">메세지</a></li>

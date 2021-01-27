@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="com.user.dao.UserDAO"%>
+<%@page import="com.user.dto.UserDTO"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,9 +16,29 @@
 <link rel="stylesheet" href="/ebb/css/host.css" type="text/css">
 </head>
 <body>
+	<!-- 로그인유지 -->
+	<%
+		Cookie[] cookies = request.getCookies();
+	if (cookies != null) {
+		for (Cookie tempCookie : cookies) {
+			if (tempCookie.getName().equals("cid")) {
+		//쿠키값으로 대신 로그인 처리함
+		String id = tempCookie.getValue();
+		UserDAO dao = new UserDAO();
+		UserDTO entity = dao.getAutoLoginUser(id);
+		session.setAttribute("logOK", entity);
+		/* System.out.println(entity.getUname()); */
+			}
+		}
+	}
+	%>
 	<div class="upperMenu">
 		<div id="menu1">
-			<div id="logo"><h3><img alt="" src="/ebb/img/logo.png">ezenbnb</h3></div>
+			<div id="logo">
+				<h3>
+					<img alt="" src="/ebb/img/logo.png">ezenbnb
+				</h3>
+			</div>
 			<div id="tab">
 				<ul class="nav nav-tabs">
 					<li role="presentation"><a href="hostmain.jsp">홈</a></li>
@@ -29,7 +51,8 @@
 			</div>
 		</div>
 		<div id="menu2">
-			<button type="button" class="btn" onclick="location.href='enroll.jsp'">숙소 등록하기</button>
+			<button type="button" class="btn"
+				onclick="location.href='houseinsert.jsp'">숙소 등록하기</button>
 			<div class="dropdown">
 				<button class="btn btn-default dropdown-toggle" type="button"
 					id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
@@ -45,12 +68,12 @@
 						href="#">대금 수령 내역</a></li>
 					<li class="divider"></li>
 					<li role="presentation"><a role="menuitem" tabindex="-1"
-						href="#">새로운 숙소 추가</a></li>
+						href="houseinsert.jsp">새로운 숙소 추가</a></li>
 					<li class="divider"></li>
 					<li role="presentation"><a role="menuitem" tabindex="-1"
-						href="/ebb/main/main.html">게스트 모드로 전환</a></li>
+						href="/ebb/main/main.jsp">게스트 모드로 전환</a></li>
 					<li role="presentation"><a role="menuitem" tabindex="-1"
-						href="/ebb/main/main.html">로그아웃</a></li>
+						href="/ebb/main/main.jsp">로그아웃</a></li>
 				</ul>
 			</div>
 		</div>
