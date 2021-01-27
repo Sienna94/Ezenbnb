@@ -115,20 +115,17 @@
 }
 
 #wrap_house1 {
-	background: orange;
 	width: 10%;
 	float: left;
 }
 
 #wrap_house2 {
-	background: gray;
 	width: 90%;
 	float: right;
 }
 
 #wrap_house3 {
 	width: 100%;
-	background: lime;
 }
 
 #img_table {

@@ -51,6 +51,7 @@ public class HouseInsertService implements CommandAction {
 				len = (int) f.length();
 			}
 			midx = Integer.parseInt(multi.getParameter("midx"));
+			System.out.println("house insert midx:" + midx);
 			hname = multi.getParameter("hname");
 			hcatg = multi.getParameter("hcatg");
 			haddress = multi.getParameter("address") + multi.getParameter("addressDetail")

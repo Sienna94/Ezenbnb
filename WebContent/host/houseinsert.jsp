@@ -4,12 +4,13 @@
 <c:import url="hostmenu.jsp" />
 
 <!-- <form action="/ebb/houseinsert.do" method="POST"> -->
-<form method="post" action="/ebb/houseinsert.do" enctype="multipart/form-data"> 
+<form method="post" action="/ebb/houseinsert.do"
+	enctype="multipart/form-data">
 	<div class="wrap_enroll">
-		<h3>${logOK.getUname()}님 안녕하세요! 숙소 등록을 시작해볼까요?</h3>
+		<h3>${logOK.getUname()}님안녕하세요! 숙소 등록을 시작해볼까요?</h3>
 		<div class="wrap_enroll2">
-				<input name="midx" type="hidden" class="form-control"
-					placeholder="${logOK.getUidx()}" aria-describedby="sizing-addon1">
+			<input name="midx" type="hidden" class="form-control"
+				value="${logOK.getUidx()}" aria-describedby="sizing-addon1">
 			<h5>숙소의 이름은 무엇인가요?</h5>
 			<div class="input-group input-group-lg">
 				<input name="hname" type="text" class="form-control"
@@ -117,12 +118,10 @@
 		<div class="wrap_enroll3">
 
 			<h5>숙소 이미지를 등록해주세요.</h5>
-		<!-- 	<input id="file" name="himage" type="file"> -->
 			<!-- 이미지 썸네일 -->
 			<div class="inputArea">
-				<label for="gdsImg">이미지</label>
-				 
-				<input type="file" id="uploadFile" name="uploadFile" />
+				<label for="gdsImg">이미지</label> <input type="file" id="uploadFile"
+					name="uploadFile" />
 				<div class="select_img">
 					<img src="" />
 				</div>

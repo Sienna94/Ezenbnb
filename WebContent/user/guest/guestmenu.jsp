@@ -39,7 +39,7 @@
 	<div class="upperMenu">
 		<div id="logo">
 			<h3>
-				<img alt="" src="/ebb/img/logo.png">ezenbnb
+				<a href="/ebb/main/main.jsp"><img alt="" src="/ebb/img/logo.png"></a>ezenbnb
 			</h3>
 		</div>
 		<div class="wrap">
@@ -48,7 +48,9 @@
 			<div class="btn-group">
 				<button type="button" class="btn btn-default dropdown-toggle"
 					data-toggle="dropdown" aria-expanded="false">
-					☰ <span class="caret"></span>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M12 2.5a5.5 5.5 0 00-3.096 10.047 9.005 9.005 0 00-5.9 8.18.75.75 0 001.5.045 7.5 7.5 0 0114.993 0 .75.75 0 101.499-.044 9.005 9.005 0 00-5.9-8.181A5.5 5.5 0 0012 2.5zM8 8a4 4 0 118 0 4 4 0 01-8 0z"></path></svg>					
+					 <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu">
 					<li><a href="inbox.jsp">메세지</a></li>

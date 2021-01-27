@@ -21,4 +21,15 @@
 			VALUES (seq_hidx.nextval, #{midx}, #{hname}, #{hcatg}, #{haddress}, #{hphone}, #{himage}, #{hfacility}, #{hprice}, #{hbed}, #{hbat}, #{hperson})
 		]]>
 	</insert>
+	<select id="getHostingList" parameterType="java.lang.Integer" resultType="HouseDTO">
+		<![CDATA[
+	         SELECT * FROM E_HOUSE
+	         WHERE mIDX LIKE #{midx}
+     	]]>
+	</select>
+	<delete id="delHosting" parameterType="java.lang.Integer">
+	    <![CDATA[
+	         DELETE E_HOUSE WHERE hIDX=#{hidx}
+	    ]]>
+    </delete>
 </mapper>
