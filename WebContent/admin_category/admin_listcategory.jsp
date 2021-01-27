@@ -4,12 +4,16 @@
 <%@include file="../admin/admin_menu.jsp"%>
 
 <div style="margin-top: 50px;">
-	<h2>카테고리 추가하기</h2>
-		<tr>
-		<td>추가할 카테고리</td>
-		<td><input type="text"></td>
-		<td><button type="button" onclick="location.href='/ebb/categoryInsert.do'">추가하기</button></td>
-	</tr>
+	<form action="/ebb/categoryInsert.do" method="post">
+		<h2>카테고리 추가하기</h2>
+		<table>
+			<tr>
+				<td>추가할 카테고리</td>
+				<td><input type="text" name="cname"></td>
+				<td><input type="submit" value="추가하기"></td>
+			</tr>
+		</table>
+	</form>
 </div>
 
 <div style="margin-top: 50px;">

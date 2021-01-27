@@ -12,7 +12,7 @@ public class CategoryInsert implements CommandAction {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		request.setCharacterEncoding("UTF-8");
-		String name = request.getParameter("name");
+		String name = request.getParameter("cname");
 		
 		CategoryDTO cdto = new CategoryDTO();
 		cdto.setCname(name);
