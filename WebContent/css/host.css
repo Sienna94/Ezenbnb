@@ -168,16 +168,17 @@
 }
 
 .wrap_enroll {
-	margin-left: 20%;
-	margin-right: 20%; display : inline-block;
-	width: 60%;
+	margin-left: 5%;
+	margin-right: 5%;
+	display: inline-block;
+	width: 90%;
 	height: 100%;
 	display: inline-block;
 }
 
 .wrap_enroll2 {
 	margin-top: 50px;
-	width: 45%;
+	width: 30%;
 	float: left;
 }
 
@@ -186,8 +187,8 @@
 	height: 46px;
 }
 
-#enroll {
+#btn_post, #subbtn {
 	width: 250px;
 	height: 46px;
-	margin-top: 30px;	
+	margin-top: 20px;
 }

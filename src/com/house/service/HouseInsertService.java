@@ -19,7 +19,7 @@ public class HouseInsertService implements CommandAction{
 		int midx=Integer.parseInt(request.getParameter("midx"));
 		String hname=request.getParameter("hname");
 		String hcatg=request.getParameter("hcatg");
-		String haddress=request.getParameter("hcatg")+request.getParameter("address");
+		String haddress=request.getParameter("address") + request.getParameter("addressDetail")+ request.getParameter("addressDetail");
 		String hphone=request.getParameter("hphone");
 		String himage=request.getParameter("himage");
 		String hfacility=request.getParameter("hfacility");
