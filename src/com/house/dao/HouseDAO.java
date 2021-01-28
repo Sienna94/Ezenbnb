@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.house.dao.HouseDAO;
 import com.house.dto.HouseDTO;
+import com.house.dto.LikeyDTO;
 import com.user.dto.UserDTO;
 
 public class HouseDAO {
@@ -39,6 +40,14 @@ public class HouseDAO {
 	public List<HouseDTO> getHouseList(String catg) {
 		SqlSession session = factory.openSession();
 		List<HouseDTO> list = session.selectList("mybatis.HouseMapper.getHouseList", catg);
+		session.close();
+		return list;
+	}
+	//좋아요 표시한 방 목록 가져오기
+	public List<LikeyDTO> getLikeyList(int midx) {
+		SqlSession session = factory.openSession();
+		System.out.println("likey dao/midx:"+midx);
+		List<LikeyDTO> list = session.selectList("mybatis.HouseMapper.getLikeyList", midx);
 		session.close();
 		return list;
 	}

@@ -15,6 +15,15 @@
 	         WHERE hCATG LIKE #{catg}
      	]]>
 	</select>
+	<select id="getLikeyList" parameterType="java.lang.Integer" resultType="LikeyDTO">
+		<![CDATA[
+			SELECT A.hIDX, A.hNAME, A.hIMAGE, A.hFACILITY, A.hBED, A.hBAT, A.hCATG, A.hADDRESS, B.lIDX
+			FROM E_HOUSE A
+			JOIN E_LIKEY B
+			ON A.hIDX=B.hIDX
+			AND B.mIDX =#{midx}
+     	]]>
+	</select>
 	<insert id="insertHouse" parameterType="HouseDTO">
 		<![CDATA[
 			INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hCATG, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 

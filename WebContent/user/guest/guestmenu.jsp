@@ -56,7 +56,7 @@
 					<li><a href="inbox.jsp">메세지</a></li>
 					<li><a href="alert.jsp">알림</a></li>
 					<li><a href="travel.jsp">여행</a></li>
-					<li><a href="like.jsp">저장목록</a></li>
+					<li><a href="/ebb/likeylist.do?midx=${logOK.getUidx()}">저장목록</a></li>
 					<li class="divider"></li>
 					<li><a href="/ebb/host/hostmain.jsp">숙소 관리</a></li>
 					<li><a href="account-settings.jsp">계정</a></li>

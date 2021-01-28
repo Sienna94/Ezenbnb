@@ -162,3 +162,17 @@
 	float: right;
 	background: maroon;
 }
+.wrap_likey1{
+	width : 100%;
+	display: inline-block;
+	background: gray;
+}
+.wrap_likey2{
+	width: 50%;
+	float:left;
+	background : aqua;
+}
+#google-map{
+	width: 800px;
+	height: 800px;
+}

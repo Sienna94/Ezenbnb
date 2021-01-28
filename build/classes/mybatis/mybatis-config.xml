@@ -6,6 +6,7 @@
 	<properties resource="mybatis/config.propertis"/>
 	<typeAliases>
 		<typeAlias type="com.user.dto.UserDTO" alias="UserDTO"/>
+		<typeAlias type="com.house.dto.LikeyDTO" alias="LikeyDTO"/>
 		<typeAlias type="com.house.dto.HouseDTO" alias="HouseDTO"/>
 		<typeAlias type="com.pay.dto.AccountDTO" alias="AccountDTO"/>
 		<typeAlias type="com.category.dto.CategoryDTO" alias="CategoryDTO"/>
