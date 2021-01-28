@@ -19,9 +19,9 @@
 	</insert>
 	
 		<!-- 카테고리 삭제 -->
-	<delete id="categoryDelete" parameterType="CategoryDTO">
+	<delete id="categoryDelete" parameterType="java.lang.Integer">
 	    <![CDATA[
-	         DELETE E_CATEGORY WHERE cNAME=#{cname}
+	         DELETE E_CATEGORY WHERE cIDX=#{id}
 	    ]]>
 	    </delete>
 
