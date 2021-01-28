@@ -13,9 +13,9 @@
 		}
 	}
 </script>
+
 <div style="margin-top: 50px;">
-	<form action="/ebb/categoryInsert.do" method="post"
-		name="categoryInputForm">
+	<form action="/ebb/categoryInsert.do" method="post" name="categoryInputForm">
 		<h2>카테고리 추가하기</h2>
 		<table>
 			<tr>
@@ -33,18 +33,19 @@
 		<tr>
 			<th align="center">번호</th>
 			<th align="center">카테고리 명</th>
+			<th align="center">수정</th>
 			<th align="center">삭제</th>
 		</tr>
 		<c:if test="${!empty clist}">
 			<c:forEach items="${clist}" var="ob">
-				<form action="/ebb/categoryDelete.do" method="post">
 					<input type="hidden" id="cidx" name="cidx" value="${ob.getCidx()}">
 					<tr>
 						<td align="left">${ob.getCidx()}</td>
 						<td align="left">${ob.getCname()}</td>
-						<td><input type="submit" value="삭제하기"></td>
+						<td><button type="submit" onclick="location.href='/ebb/categoryUpdate.do?cidx=${ob.getCidx()}'">수정하기</button></td>
+						<td><a href="/ebb/categoryDelete.do?cidx=${ob.getCidx()}">삭제하기</a>
+<%-- 						<button type="submit" onclick="location.href='/ebb/categoryDelete.do?cidx=${ob.getCidx()}'">삭제하기</button></td> --%>
 					</tr>
-				</form>
 			</c:forEach>
 		</c:if>
 	</table>

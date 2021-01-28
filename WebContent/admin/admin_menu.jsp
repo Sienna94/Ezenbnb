@@ -18,7 +18,7 @@
 </head>
 <body>
 	<div style="margin-bottom: 20px;">
-		<button type="button" class="btn btn-default btn-lg"onclick="location.href='/ebb/main/main.html'">메인</button>
+		<button type="button" class="btn btn-default btn-lg"onclick="location.href='/ebb/main/main.jsp'">메인</button>
 		<button type="button" class="btn btn-default btn-lg">환불 관리</button>
 		<button type="button" class="btn btn-default btn-lg">예약 관리</button>
 		<button type="button" class="btn btn-default btn-lg" onclick="location.href='/ebb/userList.do'">회원 관리</button>
