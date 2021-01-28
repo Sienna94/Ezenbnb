@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mybatis.HouseMapper">
+	<select id="getHouseOne" parameterType="java.lang.String" resultType="HouseDTO">
+		<![CDATA[
+	         SELECT * FROM E_HOUSE
+	         WHERE hIDX=#{hidx}
+     	]]>
+	</select>
+	<select id="getHouseList" parameterType="java.lang.String" resultType="HouseDTO">
+		<![CDATA[
+	         SELECT * FROM E_HOUSE
+	         WHERE hCATG LIKE #{catg}
+     	]]>
+	</select>
+	<insert id="insertHouse" parameterType="HouseDTO">
+		<![CDATA[
+			INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hCATG, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
+			VALUES (seq_hidx.nextval, #{midx}, #{hname}, #{hcatg}, #{haddress}, #{hphone}, #{himage}, #{hfacility}, #{hprice}, #{hbed}, #{hbat}, #{hperson})
+		]]>
+	</insert>
+	<select id="getHostingList" parameterType="java.lang.Integer" resultType="HouseDTO">
+		<![CDATA[
+	         SELECT * FROM E_HOUSE
+	         WHERE mIDX LIKE #{midx}
+     	]]>
+	</select>
+	<delete id="delHosting" parameterType="java.lang.Integer">
+	    <![CDATA[
+	         DELETE E_HOUSE WHERE hIDX=#{hidx}
+	    ]]>
+    </delete>
+</mapper>

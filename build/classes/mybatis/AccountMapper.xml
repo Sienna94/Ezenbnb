@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mybatis.AccountMapper">
+	<insert id="AccountInsert" parameterType="AccountDTO">
+		<![CDATA[			
+	        INSERT INTO E_ACCOUNT(aIDX, mIDX, hIDX, aCHECKIN, aCHECKOUT, aPERSON, aPRICE, aCARD, aCARDNUM, aEXDATE, aCVV, aPOSTNUM, aAREA) 
+			VALUES(seq_aidx.nextval, #{midx}, #{hidx}, #{acheckin}, #{acheckout}, #{aperson}, #{aprice}, #{acard}, #{acardnum}, #{aexdate}, #{acvv}, #{apostnum}, #{aarea})
+     	]]>
+	</insert>
+</mapper>
