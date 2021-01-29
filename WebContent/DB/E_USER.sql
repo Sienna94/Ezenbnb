@@ -14,7 +14,7 @@ CREATE TABLE E_USER(
     uPHONE VARCHAR2(20) DEFAULT '없음', -- 회원가입시 기재칸 X
     uADDRESS VARCHAR2(50) DEFAULT '없음', --주소
     uEMERG VARCHAR2(20) DEFAULT '없음', -- 회원가입시 기재칸 X
-    uTYPE NUMBER(1) DEFAULT 0, --회원등급 : 0 일반(guest)/1 호스트(host)/2 관리자(admin)
+    uTYPE NUMBER(1) DEFAULT 0, --회원등급 : 0 일반(guest)/1 호스트(host)/2 관리자(admin)/3 블랙리스트(blacklist)
     uBIRTH VARCHAR2(20) DEFAULT '없음',
     uRDATE DATE DEFAULT SYSDATE,		--가입일
     uDROP NUMBER(1) DEFAULT 0		--탈퇴여부

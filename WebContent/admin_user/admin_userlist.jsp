@@ -5,15 +5,15 @@
 <div>
 	<table class="table table-striped">
 		<tr>
-			<th align="center">번호</th>
-			<th align="center">아이디</th>
-			<th align="center">이름</th>
-			<th align="center">연락처</th>
-			<th align="center">주소</th>
-			<th align="center">생일</th>
-			<th align="center">회원등급</th>
-			<th align="center">가입일</th>
-			<th align="center">탈퇴</th>
+			<th>번호</th>
+			<th>아이디</th>
+			<th>이름</th>
+			<th>연락처</th>
+			<th>주소</th>
+			<th>생일</th>
+			<th>회원등급</th>
+			<th>가입일</th>
+			<th>블랙리스트</th>
 		</tr>
 		
 		<c:if test="${!empty list}">
@@ -27,6 +27,7 @@
 					<td align="left">${ob.getUbirth()}</td>
 					<td align="left">${ob.getUtype()}</td>
 					<td align="left">${ob.getUrdate()}</td>
+					<td><a href="#">블랙리스트</a></td>
 				</tr>
 			</c:forEach>
 		</c:if>

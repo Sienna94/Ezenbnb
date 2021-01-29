@@ -24,7 +24,7 @@ public class CategoryInsert implements CommandAction {
 		int n = cdao.categoryInsert(cdto);
 		request.setAttribute("n", n);
 		
-		return "admin_category/admin_resultcategory.jsp";
+		return "admin_category/admin_insertresultcategory.jsp";
 	}
 
 }

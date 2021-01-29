@@ -3,8 +3,10 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file="../admin/admin_menu.jsp"%>
 
+
 <c:if test="${0 < n}">
-	<c:redirect url="categoryList.do" />
+	<%-- 	<c:redirect url="categoryList.do" /> --%>
+	<body onload="alert('추가되었습니다'); location.href='/ebb/categoryList.do'">
 </c:if>
 
 <c:if test="${0 >= n}">

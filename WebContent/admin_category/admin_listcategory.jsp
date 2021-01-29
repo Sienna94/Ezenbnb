@@ -42,8 +42,8 @@
 					<tr>
 						<td align="left">${ob.getCidx()}</td>
 						<td align="left">${ob.getCname()}</td>
-						<td><button type="submit" onclick="location.href='/ebb/categoryUpdate.do?cidx=${ob.getCidx()}'">수정하기</button></td>
-						<td><a href="/ebb/categoryDelete.do?cidx=${ob.getCidx()}">삭제하기</a>
+						<td><a href="/ebb/admin_category/admin_modifycategory.jsp?cidx=${ob.getCidx()}">수정하기</a>
+						<td><a href="/ebb/categoryDelete.do?cidx=${ob.getCidx()}">삭제하기</a></td>
 <%-- 						<button type="submit" onclick="location.href='/ebb/categoryDelete.do?cidx=${ob.getCidx()}'">삭제하기</button></td> --%>
 					</tr>
 			</c:forEach>
