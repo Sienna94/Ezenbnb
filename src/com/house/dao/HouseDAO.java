@@ -12,6 +12,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import com.house.dao.HouseDAO;
 import com.house.dto.HouseDTO;
 import com.house.dto.LikeyDTO;
+import com.house.dto.LikeyDTO2;
 import com.user.dto.UserDTO;
 
 public class HouseDAO {
@@ -66,6 +67,26 @@ public class HouseDAO {
 			session.close();
 		}
 	}
+
+	public int insertLikey(LikeyDTO2 dto) {
+		SqlSession session = factory.openSession();
+		System.out.println("dao.insertLikey에 들어옴");
+		
+		int n = 0;
+		try {
+			n = session.insert("mybatis.HouseMapper.insertLikey", dto);
+			System.out.println("registration_n: " + n);
+			if (n > 0)
+				session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			session.rollback();
+		} finally {
+			session.close();
+		}
+		
+		return n;
+	}
 	
 	//방 등록하기
 	public int insertHouse(HouseDTO dto) {
@@ -86,4 +107,6 @@ public class HouseDAO {
 
 		return n;
 	}
+
+
 }

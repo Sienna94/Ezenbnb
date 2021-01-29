@@ -29,6 +29,12 @@
 	         DELETE E_LIKEY WHERE lIDX=#{lidx}
 	    ]]>
     </delete>
+    <insert id="insertLikey" parameterType="LikeyDTO2">
+		<![CDATA[
+			INSERT INTO E_LIKEY(lIDX, mIDX, hIDX) 
+			VALUES (seq_lidx.nextval, #{midx}, #{hidx})
+		]]>
+	</insert>
 	<insert id="insertHouse" parameterType="HouseDTO">
 		<![CDATA[
 			INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hCATG, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
