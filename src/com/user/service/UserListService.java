@@ -19,7 +19,7 @@ public class UserListService implements CommandAction{
 		
 		request.setAttribute("list", list);
 		
-		return "admin_user/admin_userlist.jsp";
+		return "admin_user/admin_userlistview.jsp";
 //		return "null";
 	}
 

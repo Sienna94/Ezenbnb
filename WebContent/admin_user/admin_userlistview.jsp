@@ -27,7 +27,7 @@
 					<td align="left">${ob.getUbirth()}</td>
 					<td align="left">${ob.getUtype()}</td>
 					<td align="left">${ob.getUrdate()}</td>
-					<td><a href="#">블랙리스트</a></td>
+					<td><a href="/ebb/admin_user/admin_balcklistview.jsp">블랙리스트</a></td>
 				</tr>
 			</c:forEach>
 		</c:if>

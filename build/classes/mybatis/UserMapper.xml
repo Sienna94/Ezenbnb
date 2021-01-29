@@ -4,8 +4,7 @@
 
 <mapper namespace="mybatis.UserMapper">
 	<!-- 로그인(계정찾기) -->
-	<select id="getUser" parameterType="UserDTO"
-		resultType="UserDTO">
+	<select id="getUser" parameterType="UserDTO" resultType="UserDTO">
 		<![CDATA[
 	         SELECT * FROM E_USER WHERE userID=#{userid} AND uPW=#{upw}
      	]]>
@@ -28,6 +27,13 @@
 	<select id="getUserList" resultType="UserDTO">
 		<![CDATA[
 			SELECT * FROM E_USER
+		]]>
+	</select>
+	
+	<!-- 블랙리스트 -->
+	<select id="BlackList" resultType="UserDTO">
+		<![CDATA[
+			SELECT * FROM E_USER WHERE uTYPE=#{utype}
 		]]>
 	</select>
 
