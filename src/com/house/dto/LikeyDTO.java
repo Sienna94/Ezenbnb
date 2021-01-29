@@ -14,7 +14,7 @@ public class LikeyDTO {
 	public LikeyDTO() {
 		super();
 	}
-
+       //커밋용
 	public LikeyDTO(int hidx, String hname, String hcatg, String haddress, String himage, String hfacility, int hbed,
 			int hbat, int lidx) {
 		super();
