@@ -11,28 +11,42 @@
 #roominfo {
 	width: 600px;
 }
+
 </style>
 
+
 <div id="wrap_likey1"></div>
-<h1>${logOK.getUname()}님의저장목록</h1>
 <div class="wrap_likey2">
-	<table>
-		<c:if test="${!empty list}">
-			<c:forEach items="${list}" var="ob">
-				<tr onClick="location.href='/ebb/houseview.do?hidx=${ob.getHidx()}'"
-					onMouseOver="this.style.background='#e9e9e9'"
-					onMouseOut="this.style.background='#FFFFFF'">
-					<td align="center"><img class="likeimg"
-						src="/ebb/img/house/${ob.getHimage()}" width="300" height="250"
-						border="0"></td>
-					<td id="roominfo" align="center">방이름: ${ob.getHname()}<br>
-						편의시설: ${ob.getHfacility()}<br> 침대수: ${ob.getHbed()}<br>
-						화장실수: ${ob.getHbat()}<br> 지역: ${ob.getHcatg()}<br>
-					</td>
-				</tr>
-			</c:forEach>
-		</c:if>
-	</table>
+	<div class="wrap_likey3">${logOK.getUname()}님의저장목록</div>
+	<c:if test="${!empty list}">
+		<c:forEach items="${list}" var="ob">
+			<div id="wrap_likey4" class="panel panel-default">
+				<div id="wrap_like5" class="panel-body">
+					<div id="likey_img">
+						<a href="/ebb/houseview.do?hidx=${ob.getHidx()}"> <img
+							class="likeyimg" src="/ebb/img/house/${ob.getHimage()}">
+						</a>
+					</div>
+					<div id="wrap_likey_info">
+						<strong>${ob.getHname()}</strong>
+						<div>
+							지역: ${ob.getHcatg()} <span>·</span> 침대 ${ob.getHbed()}개 <span>·</span>
+							화장실 ${ob.getHbat()}개 <span>·</span> 편의시설 : ${ob.getHfacility()}개
+							<span>·</span>
+						</div>
+					</div>
+					<div id="likey_icon">
+						<a href="/ebb/likeydel.do?lidx=${ob.getLidx()}"> <svg xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+							<path
+									d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 01-.686 0 16.709 16.709 0 01-.465-.252 31.147 31.147 0 01-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0114 20.408z"></path></svg>
+
+						</a>
+					</div>
+				</div>
+			</div>
+		</c:forEach>
+	</c:if>
 </div>
 <div class="wrap_likey2">
 	<!-- 구글맵 -->

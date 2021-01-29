@@ -19,24 +19,24 @@
 			</div>
 		</a>
 		<!-- /location -->
-		<a href="/ebb/houselist.do?catg=인천시">
+		<a href="/ebb/houselist.do?catg=파주시">
 			<div class="location">
 				<img
 					src="https://a0.muscache.com/im/pictures/71e23854-a3c7-491c-b715-6e86233a293f.jpg?im_q=medq&im_w=240"
 					alt="location1" />
 				<div class="location_explan">
-					<strong>인천시</strong> <span>차로 45분 거리</span>
+					<strong>파주시</strong> <span>차로 45분 거리</span>
 				</div>
 			</div>
 		</a>
 		<!-- /location -->
-		<a href="/ebb/houselist.do?catg=대구시">
+		<a href="/ebb/houselist.do?catg=부산시">
 			<div class="location">
 				<img
 					src="https://a0.muscache.com/im/pictures/71e23854-a3c7-491c-b715-6e86233a293f.jpg?im_q=medq&im_w=240"
 					alt="location1" />
 				<div class="location_explan">
-					<strong>대구시</strong> <span>차로 4시간 거리</span>
+					<strong>부산시</strong> <span>차로 4시간 거리</span>
 				</div>
 			</div>
 		</a>

@@ -51,6 +51,21 @@ public class HouseDAO {
 		session.close();
 		return list;
 	}
+	//좋아요 삭제
+	public void deleteLikey(int lidx) {
+		SqlSession session = factory.openSession();
+		int n=0;
+		try{
+			n=session.delete("mybatis.HouseMapper.deleteLikey",lidx);
+			if(n > 0)
+				session.commit();
+		}catch(Exception e) {
+			e.printStackTrace();
+			session.rollback();
+		}finally {
+			session.close();
+		}
+	}
 	
 	//방 등록하기
 	public int insertHouse(HouseDTO dto) {
