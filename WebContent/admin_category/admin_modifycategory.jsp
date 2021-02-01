@@ -27,6 +27,7 @@
 				<td>수정할 카테고리</td>
 				<td><input type="text" name="cname" size="40"	value="${param.cname}">
 			</tr>
+			
 		</table>
 		<input type="button" value="수정완료" onclick="checkCategoryWrite()">
 	</div>

@@ -13,14 +13,13 @@ public class UserListService implements CommandAction{
 	
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-//		System.out.println("어디니123");
+//		System.out.println("어디니");
 		UserDAO userdao = new UserDAO();
 		List<UserDTO> list = userdao.getUserList();
 		
 		request.setAttribute("list", list);
 		
 		return "admin_user/admin_userlistview.jsp";
-//		return "null";
 	}
 
 }

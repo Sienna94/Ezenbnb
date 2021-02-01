@@ -30,10 +30,10 @@
 		]]>
 	</select>
 	
-	<!-- 블랙리스트 -->
-	<select id="BlackList" resultType="UserDTO">
+	<!-- 블랙리스트 추가 -->
+	<select id="BlacklistUpdate" parameterType="java.lang.Integer" resultType="UserDTO">
 		<![CDATA[
-			SELECT * FROM E_USER WHERE uTYPE=#{utype}
+			UPDATE E_USER SET uTYPE='3' WHERE
 		]]>
 	</select>
 

@@ -2,7 +2,9 @@
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file="../admin/admin_menu.jsp"%>
-<div>
+
+<div style="margin-top: 50px;">
+	<h2>회원 목록 보기</h2>
 	<table class="table table-striped">
 		<tr>
 			<th>번호</th>
@@ -15,7 +17,7 @@
 			<th>가입일</th>
 			<th>블랙리스트</th>
 		</tr>
-		
+
 		<c:if test="${!empty list}">
 			<c:forEach items="${list}" var="ob">
 				<tr>
@@ -27,12 +29,15 @@
 					<td align="left">${ob.getUbirth()}</td>
 					<td align="left">${ob.getUtype()}</td>
 					<td align="left">${ob.getUrdate()}</td>
-					<td><a href="/ebb/admin_user/admin_balcklistview.jsp">블랙리스트</a></td>
+					<td><a href="#">블랙리스트</a></td>
 				</tr>
 			</c:forEach>
 		</c:if>
 	</table>
-	<br>
+	<div style="text-align: right; padding-right: 30px;">
+		<button style="align-content:" type="button" class="btn btn-danger"
+			onclick="location.href='/ebb/blackList.do'">블랙리스트 보기</button>
+	</div>
 </div>
 </body>
 </html>
