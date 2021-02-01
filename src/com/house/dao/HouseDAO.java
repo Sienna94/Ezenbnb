@@ -105,4 +105,11 @@ public class HouseDAO {
 		}
 		return n;
 	}
+	//방 검색하기
+	public List<HouseDTO> getHouseSearch(String search) {
+		SqlSession session = factory.openSession();
+		List<HouseDTO> list = session.selectList("mybatis.HouseMapper.getHouseSearch", search);
+		session.close();
+		return list;
+	}
 }

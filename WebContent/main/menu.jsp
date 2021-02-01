@@ -38,7 +38,7 @@
             </a>
           </div>
           <div class="search">
-            <form action="/ebb/index.jsp" method="POST">
+            <form action="/ebb/housesearch.do" method="POST">
               <input
                 type="text"
                 id="input"

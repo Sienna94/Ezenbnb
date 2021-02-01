@@ -34,7 +34,7 @@ INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hCATG, hADDRESS, hPHONE, hIMAGE, hFACILIT
 VALUES (seq_hidx.nextval, 3, '파주롯데월드', '파주시', '경기도 파주시 조리읍 대원리 992-1', '010-1111-1113', 'house3.jpg', '족구장3', 300003, 2, 2, 7);
 
 INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hCATG, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
-VALUES (seq_hidx.nextval, 4, '서울토박이', '서울시', '경기도 파주시 조리읍 대원리 992-1', '010-2222-2221', 'house4.jpg', '매점1', 360001, 3, 2, 4);
+VALUES (seq_hidx.nextval, 4, '서울토박이', '서울시', '서울특별시 동작구 흑석동 233', '010-2222-2221', 'house4.jpg', '매점1', 360001, 3, 2, 4);
 INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hCATG, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
 VALUES (seq_hidx.nextval, 5, '서울촌놈', '서울시', '서울특별시 용산구 이태원동 730', '010-2222-2222', 'house5.jpg', '매점2', 360002, 3, 2, 5);
 INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hCATG, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
