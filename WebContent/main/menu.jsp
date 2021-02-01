@@ -74,7 +74,7 @@
 					<c:if test="${!empty logOK }">
 						<li><a href="/ebb/user/guest/inbox.jsp">메세지</a></li>
 						<li><a href="/ebb/user/guest/alert.jsp">알림</a></li>
-						<li><a href="/ebb/user/guest/travel.jsp">여행</a></li>
+						<li><a href="/ebb/reservlist.do?midx=${logOK.getUidx()}">여행</a></li>
 						<li><a href="/ebb/likeylist.do?midx=${logOK.getUidx()}">저장목록</a></li>
 						<!-- <li class="divider"></li> -->
 						<li><a href="/ebb/host/hostmain.jsp">숙소 관리</a></li>

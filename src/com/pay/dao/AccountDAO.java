@@ -2,13 +2,16 @@ package com.pay.dao;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import com.house.dto.LikeyDTO;
 import com.pay.dto.AccountDTO;
+import com.pay.dto.ReservDTO;
 
 
 public class AccountDAO {
@@ -41,4 +44,13 @@ public class AccountDAO {
 		}
 		return n;
 	}
+	// 예약(결제) 리스트 가져오기 (guest)--------------------------------------------
+	public List<ReservDTO> getReserveList(int midx) {
+		SqlSession session = factory.openSession();
+		System.out.println("AccountDAO getReserv mthd/midx:"+midx);
+		List<ReservDTO> list = session.selectList("mybatis.AccountMapper.getReservList", midx);
+		session.close();
+		return list;
+	}
+
 }

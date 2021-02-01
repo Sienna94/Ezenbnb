@@ -31,3 +31,9 @@ create sequence seq_aidx  nocache nocycle;
 
 INSERT INTO E_ACCOUNT(aIDX, mIDX, hIDX, aCHECKIN, aCHECKOUT, aPERSON, aPRICE, aCARD, aCARDNUM, aEXDATE, aCVV, aPOSTNUM, aAREA) 
 VALUES(seq_aidx.nextval, 1, 1, '2020-12-20', '2020-12-24', 3, 360000, 'sol', '123123123', '23/08', '123', '123', '서울')
+
+SELECT A.aIDX, A.mIDX, A.aSTATE, A.aAREA, A.aCHECKIN, A.aCHECKOUT, B.hNAME
+FROM E_ACCOUNT A
+JOIN E_HOUSE B
+ON A.hIDX=B.hIDX
+AND A.mIDX ='1'

@@ -67,7 +67,7 @@ public class HouseDAO {
 			session.close();
 		}
 	}
-
+	//좋아요 추가
 	public int insertLikey(LikeyDTO2 dto) {
 		SqlSession session = factory.openSession();
 		System.out.println("dao.insertLikey에 들어옴");
@@ -86,8 +86,7 @@ public class HouseDAO {
 		}
 		
 		return n;
-	}
-	
+	}	
 	//방 등록하기
 	public int insertHouse(HouseDTO dto) {
 		SqlSession session = factory.openSession();
@@ -104,9 +103,6 @@ public class HouseDAO {
 		} finally {
 			session.close();
 		}
-
 		return n;
 	}
-
-
 }

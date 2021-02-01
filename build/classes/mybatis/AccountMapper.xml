@@ -9,4 +9,13 @@
 			VALUES(seq_aidx.nextval, #{midx}, #{hidx}, #{acheckin}, #{acheckout}, #{aperson}, #{aprice}, #{acard}, #{acardnum}, #{aexdate}, #{acvv}, #{apostnum}, #{aarea})
      	]]>
 	</insert>
+	<select id="getReservList" parameterType="java.lang.Integer" resultType="ReservDTO">
+		<![CDATA[
+			SELECT A.aIDX, A.mIDX, A.aSTATE, A.aAREA, A.aCHECKIN, A.aCHECKOUT, B.hNAME
+			FROM E_ACCOUNT A
+			JOIN E_HOUSE B
+			ON A.hIDX=B.hIDX
+			AND A.mIDX =#{midx}
+     	]]>
+	</select>
 </mapper>

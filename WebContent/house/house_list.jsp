@@ -48,9 +48,7 @@
 	</div>
 	<div id="wrap_likey">
 		<div class="wrap_likey2">
-			<div class="wrap_likey3">${list[0].getHcatg()}지역의방들이예요!
-				:D<br> ${logOK.getUidx()}
-			</div>
+			<div class="wrap_likey3">${list[0].getHcatg()} 지역의 방들이예요!:D</div>
 			<c:if test="${!empty list}">
 				<c:forEach items="${list}" var="ob">
 					<div id="wrap_likey4" class="panel panel-default">
