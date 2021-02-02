@@ -36,7 +36,7 @@
 					<td align="left">${ob.getUbirth()}</td>
 					<td align="left">${ob.getUtype()}</td>
 					<td align="left">${ob.getUrdate()}</td>
-					<td><a href="/ebb/'">해제하기</a></td>
+					<td><a href="/ebb/blackDelete.do?uidx=${ob.getUidx()}">해제하기</a></td>
 				</tr>
 			</c:forEach>
 		</c:if>
