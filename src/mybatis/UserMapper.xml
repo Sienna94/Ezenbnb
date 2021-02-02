@@ -30,11 +30,11 @@
 		]]>
 	</select>
 	
-	<!-- 블랙리스트 추가 -->
-	<select id="BlacklistUpdate" parameterType="java.lang.Integer" resultType="UserDTO">
-		<![CDATA[
-			UPDATE E_USER SET uTYPE='3' WHERE
-		]]>
-	</select>
+	<!-- 블랙리스트 해제 -->
+	<delete id="blackDelete" parameterType="java.lang.Integer">
+	    <![CDATA[
+	         DELETE E_USER WHERE uIDX=#{bid}
+	    ]]>
+	</delete>
 
 </mapper>

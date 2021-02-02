@@ -6,7 +6,7 @@
 <script>
 	function checkCategoryWrite() {
 		if (document.categoryInputForm.cname.value == "") {
-			alert("수정할 카테고리를 입력해주세요");
+			alert("수정할 카테고리를 입력해주세요.");
 			boardWriteForm.cname.focus();
 		} else {
 			document.categoryInputForm.submit();
@@ -25,7 +25,7 @@
 			</tr>
 			<tr>
 				<td>수정할 카테고리</td>
-				<td><input type="text" name="cname" size="40"	value="${param.cname}">
+				<td><input type="text" name="cname" size="40"	value="${param.cname}" placeholder="수정할 카테고리를 입력해주세요.">
 			</tr>
 			
 		</table>

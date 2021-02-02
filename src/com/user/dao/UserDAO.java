@@ -70,4 +70,20 @@ public class UserDAO {
 		session.close();
 		return list;
 	}
+
+	// 블랙리스트 해제하기-----------------------------------
+	public void blackListDelete(int bid) {
+		SqlSession session = factory.openSession();
+		int n = 0;
+		try {
+			n = session.update("mybatis.UserMapper.blackDelete", bid);
+			if (n > 0)
+				session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			session.rollback();
+		} finally {
+			session.close();
+		}
+	}
 }

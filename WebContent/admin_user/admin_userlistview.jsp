@@ -35,7 +35,7 @@
 		</c:if>
 	</table>
 	<div style="text-align: right; padding-right: 30px;">
-		<button style="align-content:" type="button" class="btn btn-danger"
+		<button type="button" class="btn btn-danger"
 			onclick="location.href='/ebb/blackList.do'">블랙리스트 보기</button>
 	</div>
 </div>

@@ -4,7 +4,7 @@
 <%@include file="../admin/admin_menu.jsp"%>
 
 <c:if test="${0 < n}">
-	<body onload="alert('추가되었습니다'); location.href='/ebb/userList.do'">
+	<body onload="alert('해제 되었습니다'); location.href='/ebb/userList.do'">
 </c:if>
 <c:if test="${0 >= n}">
 	저장 안됐다 욘석아😛😛
@@ -24,9 +24,25 @@
 			<th>가입일</th>
 			<th>블랙리스트 해제</th>
 		</tr>
-		
-		
+		<c:if test="${!empty list}">
+			<c:forEach items="${list}" var="ob">
+
+				<tr>
+					<td align="left">${ob.getUidx()}</td>
+					<td align="left">${ob.getUserid()}</td>
+					<td align="left">${ob.getUname()}</td>
+					<td align="left">${ob.getUphone()}</td>
+					<td align="left">${ob.getUaddress()}</td>
+					<td align="left">${ob.getUbirth()}</td>
+					<td align="left">${ob.getUtype()}</td>
+					<td align="left">${ob.getUrdate()}</td>
+					<td><a href="/ebb/'">해제하기</a></td>
+				</tr>
+			</c:forEach>
+		</c:if>
 	</table>
+	<button type="button" class="btn btn-default btn-lg"
+		onclick="location.href='/ebb/userList.do'">돌아가기</button>
 </div>
 
 </body>
