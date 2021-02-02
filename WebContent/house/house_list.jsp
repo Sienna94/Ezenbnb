@@ -61,8 +61,13 @@
 							<div id="wrap_likey_info">
 								<strong>${ob.getHname()}</strong>
 								<div>
-									침대 ${ob.getHbed()}개 <span>·</span> 화장실 ${ob.getHbat()}개 <span>·</span>
-									편의시설 : ${ob.getHfacility()}개 <span>·</span>
+									<div style="height:100px">
+										침대 ${ob.getHbed()}개 <span>·</span> 화장실 ${ob.getHbat()}개 <span>·</span>
+										편의시설 : ${ob.getHfacility()}개 <span>·</span>
+									</div>
+									<div style="float:right">
+										${ob.getHprice()}원
+									</div>
 								</div>
 							</div>
 							<div id="likey_icon">
