@@ -41,7 +41,7 @@
 			</div>
 			<div id="tab">
 				<ul class="nav nav-tabs">
-					<li role="presentation"><a href="/ebb/host/hostmain.jsp">홈</a></li>
+					<li role="presentation"><a href="/ebb/getReqList.do?midx=${logOK.getUidx()}">홈</a></li>
 					<li role="presentation"><a href="/ebb/host/inbox.jsp">메세지</a></li>
 					<li role="presentation"><a href="/ebb/reservlist.do?midx=${logOK.getUidx()}">예약</a></li>
 					<li role="presentation"><a href="/ebb/user/guest/travel.jsp">달력</a></li>

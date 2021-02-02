@@ -43,7 +43,7 @@
 			</h3>
 		</div>
 		<div class="wrap">
-			<span><a href="/ebb/host/hostmain.jsp">호스트xmxmxxmx 모드로 전환</a></span>
+			<span><a href="/ebb/host/hostmain.jsp">호스트 모드로 전환</a></span>
 			<!-- Single button -->
 			<div class="btn-group">
 				<button type="button" class="btn btn-default dropdown-toggle"

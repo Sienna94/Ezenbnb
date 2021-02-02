@@ -18,4 +18,48 @@
 			AND A.mIDX =#{midx}
      	]]>
 	</select>
+	<select id="getPreApprvList" parameterType="java.lang.Integer" resultType="PreApprvDTO">
+		<![CDATA[
+			SELECT A.userID,
+				B.aIDX,
+				B.aDATE,
+				B.aCHECKIN,
+				B.aCHECKOUT,
+				B.aPERSON,
+				B.aPRICE,
+				C.hIMAGE,
+				C.hNAME 
+			FROM E_USER A
+			INNER JOIN E_ACCOUNT B
+				ON A.uIDX = B.mIDX
+			INNER JOIN E_HOUSE C
+				ON B.hIDX = C.hIDX
+			WHERE C.mIDX LIKE #{midx} AND B.aSTATE LIKE '대기중'
+     	]]>
+	</select>
+	<update id="apprvUpdate" parameterType="AccountDTO">
+		<![CDATA[
+			UPDATE E_ACCOUNT
+			SET aSTATE='승인완료'
+			WHERE aIDX=#{aidx}
+		]]>
+	</update>
+	<select id="getReqList1" parameterType="java.lang.Integer" resultType="AccountDTO">
+		<![CDATA[
+			SELECT A.aSTATE
+			FROM E_ACCOUNT A
+			INNER JOIN E_HOUSE B
+				ON A.hIDX = B.hIDX
+			WHERE B.mIDX LIKE #{midx} AND A.aSTATE LIKE '대기중'
+     	]]>
+	</select>
+	<select id="getReqList2" parameterType="java.lang.Integer" resultType="AccountDTO">
+		<![CDATA[
+			SELECT A.aSTATE
+			FROM E_ACCOUNT A
+			INNER JOIN E_HOUSE B
+				ON A.hIDX = B.hIDX
+			WHERE B.mIDX LIKE #{midx} AND A.aSTATE LIKE '승인완료'
+     	]]>
+	</select>
 </mapper>

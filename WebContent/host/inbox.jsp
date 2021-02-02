@@ -10,8 +10,8 @@
 		</div>
 		<ul class="nav nav-pills nav-stacked">
 			<li role="presentation"><a href="#">전체메세지</a></li>
-			<li role="presentation"><a href="#">대기 중인 요청</a></li>
-			<li role="presentation"><a href="#">예약</a></li>
+			<li role="presentation"><a href="/ebb/preapprvlist.do?midx=${logOK.getUidx()}">대기 중인 요청</a></li>
+			<li role="presentation"><a href="#">승인된 예약</a></li>
 			<li role="presentation"><a href="#">이젠비앤비 고객지원 팀</a></li>
 			<li role="presentation"><a href="#">보관처리</a></li>
 		</ul>

@@ -11,6 +11,7 @@
 		<typeAlias type="com.house.dto.HouseDTO" alias="HouseDTO"/>
 		<typeAlias type="com.pay.dto.AccountDTO" alias="AccountDTO"/>
 		<typeAlias type="com.pay.dto.ReservDTO" alias="ReservDTO"/>
+		<typeAlias type="com.pay.dto.PreApprvDTO" alias="PreApprvDTO"/>
 		<typeAlias type="com.category.dto.CategoryDTO" alias="CategoryDTO"/>
 	</typeAliases>
 	<environments default="development">
