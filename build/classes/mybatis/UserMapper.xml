@@ -37,6 +37,10 @@
 	    ]]>
 	</update>
 	
-	
-
+	<!-- 블랙리스트 설정 -->
+	<update id="blacklistUpdate2" parameterType="UserDTO">
+	    <![CDATA[
+	         UPDATE E_USER SET uTYPE='3' WHERE uIDX=#{uidx}
+	    ]]>
+	</update>
 </mapper>

@@ -16,6 +16,8 @@ public class BlackListUpdate implements CommandAction{
 //		int utype = Integer.parseInt(request.getParameter("utype"));
 		int uidx = Integer.parseInt(request.getParameter("uidx"));
 		
+		System.out.println(uidx);
+		
 		UserDTO udto = new UserDTO();
 //		udto.setUtype(utype);
 		udto.setUidx(uidx);
