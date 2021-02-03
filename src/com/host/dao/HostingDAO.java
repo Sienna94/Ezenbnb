@@ -76,6 +76,13 @@ public class HostingDAO {
 		session.close();
 		return list;
 	}
+	//승인 완료 예약 리스트 가져오기
+	public List<PreApprvDTO> getApprvedList(int midx) {
+		SqlSession session = factory.openSession();
+		List<PreApprvDTO> list = session.selectList("mybatis.AccountMapper.getApprvdList", midx);
+		session.close();
+		return list;
+	}	
 	//예약 승인하기
 	public int apprvUpdate(AccountDTO dto) {
 		SqlSession session = factory.openSession();
@@ -83,6 +90,23 @@ public class HostingDAO {
 		int n = 0;
 		try {
 			n = session.update("mybatis.AccountMapper.apprvUpdate", dto);
+			if(n>0)
+				session.commit();
+		}catch(Exception e) {
+			e.printStackTrace();
+			session.rollback();
+		}finally {
+			session.close();
+		}
+		return n;
+	}
+	//예약 거절하기
+	public int declineUpdate(AccountDTO dto) {
+		SqlSession session = factory.openSession();
+		System.out.println("apprvUpdate DAO에 들어옴");
+		int n = 0;
+		try {
+			n = session.update("mybatis.AccountMapper.declineUpdate", dto);
 			if(n>0)
 				session.commit();
 		}catch(Exception e) {

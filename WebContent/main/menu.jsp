@@ -56,7 +56,7 @@
             	<a href="/ebb/user/login/login.jsp">호스트 전환</a>
             </c:if>
             <c:if test="${!empty logOK }">
-            	<a href="/ebb/host/hostmain.jsp">호스트 전환</a>
+            	<a href="/ebb/getReqList.do?midx=${logOK.getUidx()}">호스트 전환</a>
             </c:if>
             </div>
             <ul class="member">
@@ -72,7 +72,7 @@
 						<li><a href="/ebb/user/login/join.jsp">회원가입</a></li>
 					</c:if>
 					<c:if test="${!empty logOK }">
-						<li><a href="/ebb/user/guest/inbox.jsp">메세지</a></li>
+						<li><a href="/ebb/chatroomlist.do?userid=${logOK.getUserid()}">메세지</a></li>
 						<li><a href="/ebb/user/guest/alert.jsp">알림</a></li>
 						<li><a href="/ebb/reservlist.do?midx=${logOK.getUidx()}">여행</a></li>
 						<li><a href="/ebb/likeylist.do?midx=${logOK.getUidx()}">저장목록</a></li>

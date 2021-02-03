@@ -37,10 +37,36 @@
 			WHERE C.mIDX LIKE #{midx} AND B.aSTATE LIKE '대기중'
      	]]>
 	</select>
+	<select id="getApprvdList" parameterType="java.lang.Integer" resultType="PreApprvDTO">
+		<![CDATA[
+			SELECT A.userID,
+				B.aIDX,
+				B.aDATE,
+				B.aCHECKIN,
+				B.aCHECKOUT,
+				B.aPERSON,
+				B.aPRICE,
+				C.hIMAGE,
+				C.hNAME 
+			FROM E_USER A
+			INNER JOIN E_ACCOUNT B
+				ON A.uIDX = B.mIDX
+			INNER JOIN E_HOUSE C
+				ON B.hIDX = C.hIDX
+			WHERE C.mIDX LIKE #{midx} AND B.aSTATE LIKE '승인완료'
+     	]]>
+	</select>
 	<update id="apprvUpdate" parameterType="AccountDTO">
 		<![CDATA[
 			UPDATE E_ACCOUNT
 			SET aSTATE='승인완료'
+			WHERE aIDX=#{aidx}
+		]]>
+	</update>
+	<update id="declineUpdate" parameterType="AccountDTO">
+		<![CDATA[
+			UPDATE E_ACCOUNT
+			SET aSTATE='승인거절'
 			WHERE aIDX=#{aidx}
 		]]>
 	</update>
@@ -60,6 +86,25 @@
 			INNER JOIN E_HOUSE B
 				ON A.hIDX = B.hIDX
 			WHERE B.mIDX LIKE #{midx} AND A.aSTATE LIKE '승인완료'
+     	]]>
+	</select>
+	<select id="getReceipt" parameterType="java.lang.Integer" resultType="ReceiptDTO">
+		<![CDATA[
+			SELECT A.aDATE,
+				A.aIDX,
+				A.aPERSON,
+				A.aCHECKIN,
+				A.aCHECKOUT,
+				A.aPRICE,
+				A.aCARD,
+				A.aCARDNUM,
+				B.hCATG,
+				B.hNAME,
+				B.hADDRESS
+			FROM E_ACCOUNT A
+			INNER JOIN E_HOUSE B
+				ON A.hIDX = B.hIDX
+			WHERE A.aIDX LIKE #{aidx}
      	]]>
 	</select>
 </mapper>

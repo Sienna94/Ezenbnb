@@ -238,3 +238,38 @@
 	width: 800px;
 	height: 800px;
 }
+.wrap_receipt{
+	width : 80%;
+	margin: auto;
+	padding-top: 5%;	
+}
+.wrap_msg {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.wrap_msg1 {
+	width: 15%;
+	height: 100%;
+	float: left;
+}
+
+.wrap_msg2 {
+	padding : 5%;
+	width: 85%;
+	height: 100%;
+	float: right;
+	display: block;
+}
+#msg_received{
+	padding-right:40%;
+	float: left;
+}
+#msg_outgoing{
+	padding-left:40%;
+	float: Right;
+}
+#outgoing_body{
+	text-align: right;
+}

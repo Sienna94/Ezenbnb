@@ -6,6 +6,8 @@
 	<properties resource="mybatis/config.propertis"/>
 	<typeAliases>
 		<typeAlias type="com.user.dto.UserDTO" alias="UserDTO"/>
+		<typeAlias type="com.message.dto.MessageDTO" alias="MessageDTO"/>
+		<typeAlias type="com.message.dto.ChatroomDTO" alias="ChatroomDTO"/>
 		<typeAlias type="com.house.dto.LikeyDTO" alias="LikeyDTO"/>
 		<typeAlias type="com.house.dto.LikeyDTO2" alias="LikeyDTO2"/>
 		<typeAlias type="com.house.dto.HouseDTO" alias="HouseDTO"/>
@@ -13,6 +15,7 @@
 		<typeAlias type="com.pay.dto.AccountDTO" alias="AccountDTO"/>
 		<typeAlias type="com.pay.dto.ReservDTO" alias="ReservDTO"/>
 		<typeAlias type="com.pay.dto.PreApprvDTO" alias="PreApprvDTO"/>
+		<typeAlias type="com.pay.dto.ReceiptDTO" alias="ReceiptDTO"/>
 		<typeAlias type="com.category.dto.CategoryDTO" alias="CategoryDTO"/>
 	</typeAliases>
 	<environments default="development">
@@ -32,5 +35,6 @@
 		<mapper resource="mybatis/HouseMapper.xml"/>
 		<mapper resource="mybatis/AccountMapper.xml"/>
 		<mapper resource="mybatis/CategoryMapper.xml"/>
+		<mapper resource="mybatis/MessageMapper.xml"/>
 	</mappers>
 </configuration>

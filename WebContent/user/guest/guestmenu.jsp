@@ -43,7 +43,7 @@
 			</h3>
 		</div>
 		<div class="wrap">
-			<span><a href="/ebb/host/hostmain.jsp">호스트 모드로 전환</a></span>
+			<span><a href="/ebb/getReqList.do?midx=${logOK.getUidx()}">호스트 모드로 전환</a></span>
 			<!-- Single button -->
 			<div class="btn-group">
 				<button type="button" class="btn btn-default dropdown-toggle"
@@ -53,7 +53,7 @@
 					 <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="inbox.jsp">메세지</a></li>
+					<li><a href="/ebb/chatroomlist.do?userid=${logOK.getUserid()}">메세지</a></li>
 					<li><a href="alert.jsp">알림</a></li>
 					<li><a href="/ebb/reservlist.do?midx=${logOK.getUidx()}">여행</a></li>
 					<li><a href="/ebb/likeylist.do?midx=${logOK.getUidx()}">저장목록</a></li>

@@ -10,7 +10,7 @@
 				<div class="panel-body">
 					<h3>예약 요청</h3>
 					<div>
-						<button class="btn btn-primary" type="button" >
+						<button class="btn btn-primary" type="button" onclick="location.href='/ebb/preapprvlist.do?midx=${logOK.getUidx()}'">
 							Pre-Approved Requests <span class="badge">${count.size_pre}</span>
 						</button>
 					</div>
@@ -19,7 +19,7 @@
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<h3>승인된 예약</h3>
-					<button class="btn btn-primary" type="button">
+					<button class="btn btn-primary" type="button" onclick="location.href='/ebb/apprvdlist.do?midx=${logOK.getUidx()}'">
 						Approved Requests <span class="badge">${count.size_vd}</span>
 					</button>
 				</div>

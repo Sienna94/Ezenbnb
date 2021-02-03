@@ -19,13 +19,10 @@
 	<div class="wrap_msg2">
 
 		<div>
-			<c:if test="${empty list}">
-				<h3>아직 예정된 예약이 없어요ㅠ 숙소를 더 매력적으로 수정해보세요! (●'◡'●)</h3>
-			</c:if>
 			<c:if test="${!empty list}">
 				<c:forEach items="${list}" var="ob">
 					<div class="panel panel-default">
-						<div class="panel-heading">대기 중</div>
+						<div class="panel-heading">승인 완료</div>
 						<div class="panel-body">
 							<div>${ob.getUserid()}</div>
 							<div>
@@ -40,10 +37,10 @@
 							<div class="btn-group btn-group-justified" role="group"
 								aria-label="...">
 								<div class="btn-group" role="group">
-									<button type="button" onclick="location.href='/ebb/approval.do?aidx=${ob.getAidx()}'" class="btn btn-default">승 인</button>
+									<button type="button" onclick="location.href='/ebb/approval.do?aidx=${ob.getAidx()}'" class="btn btn-default">취소하기</button>
 								</div>
 								<div class="btn-group" role="group">
-									<button type="button" onclick="location.href='/ebb/decline.do?aidx=${ob.getAidx()}'" class="btn btn-default">거 절</button>
+									<button type="button" class="btn btn-default">이건몰랑</button>
 								</div>
 							</div>
 						</div>

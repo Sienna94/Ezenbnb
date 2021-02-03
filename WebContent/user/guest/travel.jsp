@@ -32,7 +32,7 @@
 								<a href="/ebb/main/main.jsp">다른 숙소 찾기</a><br>
 								환불 요청<br>
 								메세지 기록<br>
-								영수증 보기<br>
+								<a href="/ebb/receipt.do?aidx=${ob.getAidx()}">영수증 보기</a><br>
 							</td>
 						</tr>
 					</tbody>

@@ -4,17 +4,24 @@
 <c:import url="guestmenu.jsp" />
 
 <div class="wrap_msg">
-	<span>메세지 주고받기</span>
-	<div class="btn-group">
-		<button type="button" class="btn btn-default dropdown-toggle"
-			data-toggle="dropdown" aria-expanded="false">
-			msg_select<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu" role="menu">
-			<li><a href="#">모든 메세지</a></li>
-			<li><a href="#">보관 처리한 메세지</a></li>
-			<li><a href="#">읽지 않은 메세지</a></li>
+	<div class="wrap_msg1">
+		<div>
+			<h3>전체 메시지함</h3>
+		</div>
+		<ul class="nav nav-pills nav-stacked">
+			<li role="presentation"><a href="/ebb/user/guest/inbox.jsp">전체메세지</a></li>
+			<li role="presentation"><a href="">중요 표시한 메세지</a></li>
 		</ul>
+	</div>
+	<div class="wrap_msg2">
+		<div class="list-group">
+			<a href="#" class="list-group-item disabled"> 전체 메세지 목록 </a>
+			<c:if test="${!empty list}">
+				<c:forEach items="${list}" var="ob">
+					<a href="/ebb/messagelist.do?chatidx=${ob.getChatidx()}" class="list-group-item">대화 ${ob.getChatidx()}</a>
+				</c:forEach>
+			</c:if>
+		</div>
 	</div>
 </div>
 </body>

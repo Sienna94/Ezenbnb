@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.house.dto.LikeyDTO;
 import com.pay.dto.AccountDTO;
+import com.pay.dto.ReceiptDTO;
 import com.pay.dto.ReservDTO;
 
 
@@ -52,5 +53,12 @@ public class AccountDAO {
 		session.close();
 		return list;
 	}
-
+	//영수증 가져오기(guest)----------------------------------------------
+	public List<ReceiptDTO> getReceipt(int aidx) {
+		SqlSession session = factory.openSession();
+		System.out.println("AccountDAO getReceipt midx:"+aidx);
+		List<ReceiptDTO> list = session.selectList("mybatis.AccountMapper.getReceipt", aidx);
+		session.close();
+		return list;
+	}
 }
