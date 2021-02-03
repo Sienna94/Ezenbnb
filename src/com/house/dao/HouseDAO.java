@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.house.dao.HouseDAO;
 import com.house.dto.HouseDTO;
+import com.house.dto.HouseDTO2;
 import com.house.dto.LikeyDTO;
 import com.house.dto.LikeyDTO2;
 import com.user.dto.UserDTO;
@@ -109,6 +110,13 @@ public class HouseDAO {
 	public List<HouseDTO> getHouseSearch(String search) {
 		SqlSession session = factory.openSession();
 		List<HouseDTO> list = session.selectList("mybatis.HouseMapper.getHouseSearch", search);
+		session.close();
+		return list;
+	}
+
+	public List<HouseDTO2> getHouseUtillList(String utill) {
+		SqlSession session = factory.openSession();
+		List<HouseDTO2> list = session.selectList("mybatis.HouseMapper.getHouseUtillList", utill);
 		session.close();
 		return list;
 	}

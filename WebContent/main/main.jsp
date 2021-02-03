@@ -101,21 +101,27 @@
 	<div class="category">
 		<h1>어디에서나, 여행은 살아보는 거야!</h1>
 		<div class="lodge">
-			<img src="/ebb/img/category_sample1.jpg" alt="lodge1" />
+			<a href="/ebb/houseutillsearch.do?utill=1">
+				<img src="/ebb/img/category_sample1.jpg" alt="lodge1" />
+			</a>
 			<div class="lodge_explan">
 				<strong>집전체</strong>
 			</div>
 		</div>
 		<!-- /lodge -->
 		<div class="lodge">
-			<img src="/ebb/img/category_sample3.jpg" alt="lodge1" />
+			<a href="/ebb/houseutillsearch.do?utill=2">
+				<img src="/ebb/img/category_sample3.jpg" alt="lodge1" />
+			</a>
 			<div class="lodge_explan">
 				<strong>독특한 공간</strong>
 			</div>
 		</div>
 		<!-- /lodge -->
 		<div class="lodge">
-			<img src="/ebb/img/category_sample4.jpg" alt="lodge1" />
+			<a href="/ebb/houseutillsearch.do?utill=3">
+				<img src="/ebb/img/category_sample4.jpg" alt="lodge1" />
+			</a>
 			<div class="lodge_explan">
 				<strong>반려동물 동반 가능</strong>
 			</div>

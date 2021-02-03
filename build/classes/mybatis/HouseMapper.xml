@@ -60,4 +60,11 @@
 			 OR hCATG LIKE '%'||#{search}||'%'
      	]]>
 	</select>
+	<select id="getHouseUtillList" parameterType="java.lang.String" resultType="HouseDTO2">
+		<![CDATA[
+	         SELECT *
+			 FROM E_HOUSE, E_UTILL
+			 WHERE hUTILL = #{utill} and uIDX = #{utill}
+     	]]>
+	</select>
 </mapper>
