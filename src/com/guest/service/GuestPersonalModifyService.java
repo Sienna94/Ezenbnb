@@ -43,7 +43,7 @@ public class GuestPersonalModifyService implements CommandAction{
 		request.setAttribute("n", n);
 		System.out.println("n :"+n);
 		
-		return "/user/guest/guestindex.jsp";
+		return "/user/guest/account-settings.jsp";
 	}
 
 }

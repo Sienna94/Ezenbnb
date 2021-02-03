@@ -2,7 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:import url="guestmenu.jsp" />
-
+<%
+request.setCharacterEncoding("UTF-8");
+String chatidx = request.getParameter("chatidx");
+System.out.println("chatidx :" + chatidx);
+%>
 <div class="wrap_msg">
 	<div class="wrap_msg1">
 		<div>
@@ -16,7 +20,6 @@
 	<div class="wrap_msg2">
 		<c:if test="${!empty list}">
 			<c:forEach items="${list}" var="ob">
-
 				<c:if test="${ob.getUserid() != logOK.getUserid()}">
 					<div id="msg_received">
 						<div class="media">
@@ -49,8 +52,6 @@
 						</div>
 					</div>
 				</c:if>
-
-
 				<c:if test="${ob.getUserid() == logOK.getUserid()}">
 					<div id="msg_outgoing">
 						<div class="media">
@@ -84,18 +85,22 @@
 			</c:forEach>
 		</c:if>
 		<div id="msg_input">
-			<div class="row">
-				<!-- /.col-lg-11(사이즈++) -->
-				<div class="col-lg-12">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="메세지 작성하기"
-							id="inputpart"> <span class="input-group-btn"
-							aria-describedby="sizing-addon2">
-							<button class="btn btn-default" type="button">보내기</button>
-						</span>
+			<form action="/ebb/messageInsert.do" method="POST">
+				<div class="row">
+					<!-- /.col-lg-11(사이즈++) -->
+					<div class="col-lg-12">
+						<div class="input-group">
+							<input name="chatidx" type="hidden" value="<%=chatidx%>">
+							<input name="userid" type="hidden" value="${logOK.getUserid()}">
+							<input name="mcontent" type="text" class="form-control"
+								placeholder="메세지 작성하기" id="inputpart"> <span
+								class="input-group-btn" aria-describedby="sizing-addon2">
+								<button class="btn btn-default" type="submit">보내기</button>
+							</span>
+						</div>
 					</div>
 				</div>
-			</div>
+			</form>
 		</div>
 	</div>
 </div>

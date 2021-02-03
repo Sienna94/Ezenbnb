@@ -37,8 +37,8 @@
 	</insert>
 	<insert id="insertHouse" parameterType="HouseDTO">
 		<![CDATA[
-			INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hCATG, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON) 
-			VALUES (seq_hidx.nextval, #{midx}, #{hname}, #{hcatg}, #{haddress}, #{hphone}, #{himage}, #{hfacility}, #{hprice}, #{hbed}, #{hbat}, #{hperson})
+			INSERT INTO E_HOUSE(hIDX, mIDX, hNAME, hCATG, hADDRESS, hPHONE, hIMAGE, hFACILITY, hPRICE, hBED, hBAT, hPERSON, hUTILL) 
+			VALUES (seq_hidx.nextval, #{midx}, #{hname}, #{hcatg}, #{haddress}, #{hphone}, #{himage}, #{hfacility}, #{hprice}, #{hbed}, #{hbat}, #{hperson}, #{hutill})
 		]]>
 	</insert>
 	<select id="getHostingList" parameterType="java.lang.Integer" resultType="HouseDTO">

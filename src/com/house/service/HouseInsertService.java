@@ -30,6 +30,7 @@ public class HouseInsertService implements CommandAction {
 		int hbed;
 		int hbat;
 		int hperson;
+		int hutill;
 
 		// 이미지 저장
 		final String saveFolder = request.getSession().getServletContext().getRealPath("/img/house");
@@ -62,6 +63,7 @@ public class HouseInsertService implements CommandAction {
 			hbed = Integer.parseInt(multi.getParameter("hbed"));
 			hbat = Integer.parseInt(multi.getParameter("hbat"));
 			hperson = Integer.parseInt(multi.getParameter("hperson"));
+			hutill = Integer.parseInt(multi.getParameter("hutill"));
 
 			HouseDTO dto = new HouseDTO();
 			dto.setMidx(midx);
@@ -75,6 +77,7 @@ public class HouseInsertService implements CommandAction {
 			dto.setHbed(hbed);
 			dto.setHbat(hbat);
 			dto.setHperson(hperson);
+			dto.setHutill(hutill);
 
 			HouseDAO dao = new HouseDAO(); // dao 성공 1, 실패 0
 			int n = dao.insertHouse(dto);

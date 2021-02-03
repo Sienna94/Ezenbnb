@@ -60,5 +60,6 @@ public class MessageDTO {
 	public void setChatidx(int chatidx) {
 		this.chatidx = chatidx;
 	}
+
 	
 }

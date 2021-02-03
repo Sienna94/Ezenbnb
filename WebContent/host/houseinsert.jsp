@@ -114,6 +114,15 @@
 				<input name="hphone" type="text" class="form-control"
 					placeholder="예)01012345678" aria-describedby="sizing-addon1">
 			</div>
+			<h5>숙소의 특징을 아래에서 골라주세요.</h5>
+			<select class="count" name="hutill">
+				<option value="0" selected="selected">-</option>
+				<option value="1">집전체</option>
+				<option value="2">독특한공간</option>
+				<option value="3">반려동물</option>
+				<option value="4">방갈로</option>
+				<option value="5">수영장</option>
+			</select>
 		</div>
 		<div class="wrap_enroll3">
 

@@ -5,11 +5,11 @@
 <mapper namespace="mybatis.MessageMapper">
 	<select id="getChatroomList" parameterType="java.lang.String" resultType="ChatroomDTO">
 		<![CDATA[
-	         SELECT A.chatIDX
-			 FROM E_CHATROOM A
-			 JOIN E_MSG B
-			 ON A.chatIDX=B.chatIDX
-			 WHERE B.userID=#{userid}
+	        SELECT DISTINCT A.chatIDX
+			FROM E_CHATROOM A
+			JOIN E_MSG B
+			ON A.chatIDX=B.chatIDX
+			WHERE B.userID=#{userid}
      	]]>
 	</select>
 	<select id="getMessageList" parameterType="java.lang.Integer" resultType="MessageDTO">
@@ -18,4 +18,16 @@
 	         WHERE chatIDX=#{chatidx}
      	]]>
 	</select>
+	<insert id="insertMessage" parameterType="MessageDTO">
+		<![CDATA[
+			INSERT INTO E_MSG(msgIDX, mCONTENT, userID, chatIDX) 
+			VALUES (seq_msgidx.nextval, #{mcontent}, #{userid}, #{chatidx})
+		]]>
+	</insert>
+	<insert id="insertChatroom" parameterType="ChatroomDTO">
+		<![CDATA[
+			INSERT INTO E_CHATROOM(chatIDX) 
+			VALUES (seq_chatidx.nextval)
+		]]>
+	</insert>
 </mapper>

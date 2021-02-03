@@ -10,6 +10,7 @@ CREATE TABLE E_MSG(
     msgIDX NUMBER(5) PRIMARY KEY, --메세지번호
     mCONTENT CLOB, --메세지 내용
     mTIME DATE DEFAULT SYSDATE, --메세지 전송시간
+    mIDX NUMBER(5),
     userID VARCHAR2(30), -- 유저 아이디
     chatIDX NUMBER(5) --채팅방 아이디
 );
