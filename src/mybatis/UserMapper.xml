@@ -30,6 +30,13 @@
 		]]>
 	</select>
 	
+	<!-- 블랙 리스트 -->
+	<select id="getBlackList" resultType="UserDTO">
+		<![CDATA[
+			SELECT * FROM E_USER WHERE uTYPE='3'
+		]]>
+	</select>
+	
 	<!-- 블랙리스트 해제 -->
 	<update id="blacklistUpdate" parameterType="UserDTO">
 	    <![CDATA[

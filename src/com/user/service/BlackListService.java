@@ -16,7 +16,7 @@ public class BlackListService implements CommandAction {
 		System.out.println("왔니");
 
 		UserDAO userdao = new UserDAO();
-		List<UserDTO> list = userdao.getUserList();
+		List<UserDTO> list = userdao.getBlackList();
 
 		request.setAttribute("list", list);
 

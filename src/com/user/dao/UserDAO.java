@@ -70,6 +70,14 @@ public class UserDAO {
 		session.close();
 		return list;
 	}
+	
+	// 블랙 리스트 가져오기-----------------------------------
+	public List<UserDTO> getBlackList() {
+		SqlSession session = factory.openSession();
+		List<UserDTO> list = session.selectList("mybatis.UserMapper.getBlackList");
+		session.close();
+		return list;
+	}
 
 	// 블랙리스트 해제(회원등급 변경 3(블랙리스트)->1(일반))-------------------
 	public int blackUpdate(UserDTO udto) {
