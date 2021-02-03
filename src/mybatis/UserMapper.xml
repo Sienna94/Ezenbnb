@@ -36,5 +36,7 @@
 	         UPDATE E_USER SET uTYPE='1' WHERE uIDX=#{uidx}
 	    ]]>
 	</update>
+	
+	
 
 </mapper>
