@@ -31,10 +31,10 @@
 	</select>
 	
 	<!-- 블랙리스트 해제 -->
-	<delete id="blackDelete" parameterType="java.lang.Integer">
+	<update id="blacklistUpdate" parameterType="UserDTO">
 	    <![CDATA[
-	         DELETE E_USER WHERE uIDX=#{bid}
+	         UPDATE E_USER SET uTYPE='1' WHERE uIDX=#{uidx}
 	    ]]>
-	</delete>
+	</update>
 
 </mapper>

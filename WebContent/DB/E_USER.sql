@@ -33,4 +33,4 @@ INSERT INTO E_USER(uIDX, userID, uPW, uNAME, uPHONE, uEMERG, uTYPE)
 VALUES (seq_uidx.nextval, 'test', 'test', '뫄뫄', '010-4444-1111', '010-5555-1222', 3);
 
 
-UPDATE E_USER SET uTYPE='3' WHERE uIDX=#{uidx}
+UPDATE E_USER SET uTYPE='3' WHERE uIDX='1'
