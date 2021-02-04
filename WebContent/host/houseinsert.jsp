@@ -4,10 +4,15 @@
 <c:import url="hostmenu.jsp" />
 
 <!-- <form action="/ebb/houseinsert.do" method="POST"> -->
+<script type="text/javascript">
+	function warning() {
+		alert("사용이 제한된 사용자입니다. 관리자에게 문의하세요");
+	}
+</script>
 <form method="post" action="/ebb/houseinsert.do"
 	enctype="multipart/form-data">
 	<div class="wrap_enroll">
-		<h3>${logOK.getUname()}님안녕하세요! 숙소 등록을 시작해볼까요?</h3>
+		<h3>${logOK.getUname()}님안녕하세요!숙소 등록을 시작해볼까요?</h3>
 		<div class="wrap_enroll2">
 			<input name="midx" type="hidden" class="form-control"
 				value="${logOK.getUidx()}" aria-describedby="sizing-addon1">
@@ -187,7 +192,12 @@
 					placeholder="예)50000" aria-describedby="sizing-addon1">
 			</div>
 			<div>
-				<button id="subbtn" type="submit" class="btn">숙소 등록하기</button>
+				<c:if test="${logOK.getUtype() != '3'}">
+					<button id="subbtn" type="submit" class="btn">숙소 등록하기</button>
+				</c:if>
+				<c:if test="${logOK.getUtype() == '3'}">
+					<button id="subbtn" onclick="warning()">숙소 등록하기</button>
+				</c:if>
 			</div>
 		</div>
 	</div>

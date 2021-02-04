@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@page import="com.user.dao.UserDAO"%>
 <%@page import="com.user.dto.UserDTO"%>
 
@@ -53,7 +54,7 @@ form div {
 h3 {
 	margin: 0px;
 }
-
+zz
 div p {
 	margin: 5px 0px 10px;
 }
@@ -108,6 +109,9 @@ if (cookies != null) {
 			document.inputForm.submit();
 		}
 	}
+	function warning(){
+		alert("사용이 제한된 사용자입니다. 관리자에게 문의하세요");
+	}
 </script>
 </head>
 
@@ -141,7 +145,7 @@ ${dto.getHutill()}<br> --%>
 			<h3>전화번호</h3>
 			<p>${dto.getHphone()}</p>
 			<h3>방가격</h3>
-			<p>${dto.getHprice()}</p>
+			<p>${dto.getHprice()}원</p>
 
 		</div>
 		<div>
@@ -216,7 +220,12 @@ ${dto.getHutill()}<br> --%>
 						name="midx" id="midx" value="${dto.getMidx()}" />
 				</div>
 				<div>
+				<c:if test="${logOK.getUtype() != '3'}">
 					<button type="button" onclick="checkWrite()">예약가능여부보기</button>
+				</c:if>
+				<c:if test="${logOK.getUtype() == '3'}">
+					<button type="button" onclick="warning()">예약가능여부보기</button>
+				</c:if>
 				</div>
 			</form>
 		</div>
@@ -244,14 +253,16 @@ ${dto.getHutill()}<br> --%>
 			var geocoder = new google.maps.Geocoder();
 
 			geocodeAddress(geocoder, map);
+
 			function geocodeAddress(geocoder, resultMap) {
 				var locations = [];
 				var house = [];
+				/*            	<c:forEach items="${list}" var="ob"> */
 				house.push('${dto.getHaddress()}');
 				house.push('${dto.getHname()}');
 				locations.push(house);
-				console.log('locations');
 				house = [];
+				/*            	</c:forEach> */
 
 				var infowindow = new google.maps.InfoWindow();
 				for (var i = 0; i < locations.length; i++) {
