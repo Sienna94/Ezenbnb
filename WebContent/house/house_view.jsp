@@ -244,16 +244,14 @@ ${dto.getHutill()}<br> --%>
 			var geocoder = new google.maps.Geocoder();
 
 			geocodeAddress(geocoder, map);
-
 			function geocodeAddress(geocoder, resultMap) {
 				var locations = [];
 				var house = [];
-				/*            	<c:forEach items="${list}" var="ob"> */
 				house.push('${dto.getHaddress()}');
 				house.push('${dto.getHname()}');
 				locations.push(house);
+				console.log('locations');
 				house = [];
-				/*            	</c:forEach> */
 
 				var infowindow = new google.maps.InfoWindow();
 				for (var i = 0; i < locations.length; i++) {
