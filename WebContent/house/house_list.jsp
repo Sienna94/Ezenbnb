@@ -42,7 +42,7 @@
 	}
 	%>
 	<div class="upperMenu" style="padding: 15px;">
-		<a href="/ebb/main/main.jsp"> <img src="/ebb/img/logo.png"
+		<a href="/ebb/mainList.do"> <img src="/ebb/img/logo.png"
 			alt="logo" />
 		</a>
 	</div>
