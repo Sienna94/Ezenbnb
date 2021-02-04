@@ -36,7 +36,7 @@
 		<div id="menu1">
 			<div id="logo">
 				<h3>
-					<a href="/ebb/main/main.jsp"><img alt="" src="/ebb/img/logo.png"></a>ezenbnb
+					<a href="/ebb/mainList.do"><img alt="" src="/ebb/img/logo.png"></a>ezenbnb
 				</h3>
 			</div>
 			<div id="tab">
