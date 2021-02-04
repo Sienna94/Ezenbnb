@@ -10,6 +10,6 @@ CREATE TABLE E_CATEGORY(
 );
 create sequence seq_cidx nocache nocycle;
 
-INSERT INTO E_CATEGORY(cIDX, cNAME) VALUES (seq_cidx.nextval, '경기도');
-INSERT INTO E_CATEGORY(cIDX, cNAME) VALUES (seq_cidx.nextval, '대전');
-INSERT INTO E_CATEGORY(cIDX, cNAME) VALUES (seq_cidx.nextval, '해남');
+INSERT INTO E_CATEGORY(cIDX, cNAME) VALUES (seq_cidx.nextval, '파주시');
+INSERT INTO E_CATEGORY(cIDX, cNAME) VALUES (seq_cidx.nextval, '서울시');
+INSERT INTO E_CATEGORY(cIDX, cNAME) VALUES (seq_cidx.nextval, '부산시');

@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page import="com.user.dao.UserDAO"%>
 <%@page import="com.user.dto.UserDTO"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -108,6 +110,7 @@ if (cookies != null) {
 	}
 </script>
 </head>
+
 <body>
 	<%-- 방상세페이지<br>
 ${dto.getHidx()}<br>
@@ -120,6 +123,7 @@ ${dto.getHbed()}<br>
 ${dto.getHbat()}<br>
 ${dto.getHperson()}<br>
 ${dto.getHutill()}<br> --%>
+
 	<div class="house_view">
 		<div>
 			<h1>방제목: ${dto.getHname()}</h1>
@@ -151,6 +155,22 @@ ${dto.getHutill()}<br> --%>
 			<p>${dto.getHperson()}명</p>
 			<h3>편의시설</h3>
 			<p>${dto.getHfacility()}</p>
+			<h3>숙소특징</h3>
+			<c:if test="${dto.getHutill()==1}">
+			<p>집전체</p>
+			</c:if>
+			<c:if test="${dto.getHutill()==2}">
+			<p>독특한공간</p>
+			</c:if>
+			<c:if test="${dto.getHutill()==3}">
+			<p>반려동물</p>
+			</c:if>
+			<c:if test="${dto.getHutill()==4}">
+			<p>방갈로</p>
+			</c:if>
+			<c:if test="${dto.getHutill()==5}">
+			<p>수영장</p>
+			</c:if>
 		</div>
 		<div>
 			<hr style="width: 500px; margin-left: 0px;">
