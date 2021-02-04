@@ -30,7 +30,11 @@ INSERT INTO E_USER(uIDX, userID, uPW, uNAME, uPHONE, uEMERG, uTYPE)
 VALUES (seq_uidx.nextval, 'ccc', 'ccc', '김하늘', '010-4444-1111', '010-4444-1222', 0);
 
 INSERT INTO E_USER(uIDX, userID, uPW, uNAME, uPHONE, uEMERG, uTYPE) 
-VALUES (seq_uidx.nextval, 'test', 'test', '뫄뫄', '010-4444-1111', '010-5555-1222', 3);
+VALUES (seq_uidx.nextval, 'test1', 'test1', '뫄뫄', '010-4444-1111', '010-5555-1222', 1);
+INSERT INTO E_USER(uIDX, userID, uPW, uNAME, uPHONE, uEMERG, uTYPE) 
+VALUES (seq_uidx.nextval, 'test2', 'test2', '롸롸', '010-5555-1111', '010-6666-1222', 1);
+INSERT INTO E_USER(uIDX, userID, uPW, uNAME, uPHONE, uEMERG, uTYPE) 
+VALUES (seq_uidx.nextval, 'test3', 'test3', '솨솨', '010-6666-1111', '010-7777-1222', 1);
 
 
 UPDATE E_USER SET uTYPE='3' WHERE uIDX='1'
