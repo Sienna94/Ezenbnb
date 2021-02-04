@@ -34,6 +34,7 @@
         <div class="menu_group">
           <div class="logo">
             <a href="/ebb/mainList.do">
+
               <img src="/ebb/img/logo.png" alt="logo" />
             </a>
           </div>

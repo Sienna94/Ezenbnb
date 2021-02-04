@@ -54,7 +54,7 @@
 				</button>
 				<ul class="dropdown-menu" role="menu">
 					<li><a href="/ebb/chatroomlist.do?userid=${logOK.getUserid()}">메세지</a></li>
-					<li><a href="alert.jsp">알림</a></li>
+					<li><a href="/ebb/user/guest/alert.jsp">알림</a></li>
 					<li><a href="/ebb/reservlist.do?midx=${logOK.getUidx()}">여행</a></li>
 					<li><a href="/ebb/likeylist.do?midx=${logOK.getUidx()}">저장목록</a></li>
 					<li class="divider"></li>

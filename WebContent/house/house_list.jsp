@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page import="com.user.dao.UserDAO"%>
 <%@page import="com.user.dto.UserDTO"%>
 <!DOCTYPE html>
@@ -42,8 +43,7 @@
 	}
 	%>
 	<div class="upperMenu" style="padding: 15px;">
-		<a href="/ebb/mainList.do"> <img src="/ebb/img/logo.png"
-			alt="logo" />
+		<a href="/ebb/mainList.do"> <img src="/ebb/img/logo.png" alt="logo" />
 		</a>
 	</div>
 	<div id="wrap_likey">
@@ -61,12 +61,12 @@
 							<div id="wrap_likey_info">
 								<strong>${ob.getHname()}</strong>
 								<div>
-									<div style="height:100px">
+									<div style="height: 100px">
 										침대 ${ob.getHbed()}개 <span>·</span> 화장실 ${ob.getHbat()}개 <span>·</span>
 										편의시설 : ${ob.getHfacility()}개 <span>·</span>
 									</div>
-									<div style="float:right">
-										${ob.getHprice()}원
+									<div id="info_price">
+										KRW <fmt:formatNumber type="number" maxFractionDigits="3" value="${ob.getHprice()}" />원
 									</div>
 								</div>
 							</div>

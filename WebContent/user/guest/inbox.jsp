@@ -9,7 +9,7 @@
 			<h3>전체 메시지함</h3>
 		</div>
 		<ul class="nav nav-pills nav-stacked">
-			<li role="presentation"><a href="/ebb/user/guest/inbox.jsp">전체메세지</a></li>
+			<li role="presentation"><a href="/ebb/chatroomlist.do?userid=${logOK.getUserid()}">전체메세지</a></li>
 			<li role="presentation"><a href="">중요 표시한 메세지</a></li>
 		</ul>
 	</div>

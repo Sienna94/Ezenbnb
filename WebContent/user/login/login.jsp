@@ -26,11 +26,6 @@
 					session.removeAttribute("logFail");
 				%>
 			</c:if>
-			<div class="content_birth">
-				<div>비밀번호 보기</div>
-				<div>전화번호로 로그인</div>
-				<div>비밀번호를 잊으셨나요?</div>
-			</div>
 			<div class="wrap_btn">
 				<button class="btn_join" type="submit">로그인</button>
 			</div>

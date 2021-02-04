@@ -95,14 +95,12 @@
 	width: 70%;
 	margin: auto;
 	text-align: left;
-	background: aqua;
 }
 
 .wrap_account1 {
 	margin: 15px;
 	float: left;
 	width: 30%;
-	background: fuchsia;
 }
 
 .panel-body>.content {
@@ -114,14 +112,12 @@
 	width: 70%;
 	margin-left: 15%;
 	margin-right: 15%;
-	background: fuchsia;
 }
 
 .wrap_pers {
 	float: left;
 	width: 70%;
 	margin: auto;
-	background: gray;
 }
 
 .wrap_pers2 {
@@ -135,7 +131,6 @@
 .wrap_pers3 {
 	width: 30%;
 	float: right;
-	background: maroon;
 }
 
 #wrap_security {
@@ -143,14 +138,14 @@
 	width: 70%;
 	margin-left: 15%;
 	margin-right: 15%;
-	background: fuchsia;
+
 }
 
 .wrap_security1 {
 	float: left;
 	width: 70%;
 	margin: auto;
-	background: gray;
+
 }
 
 .wrap_security2 {
@@ -160,13 +155,13 @@
 .wrap_security3 {
 	width: 30%;
 	float: right;
-	background: maroon;
+
 }
 
 .wrap_likey1 {
 	width: 100%;
 	display: inline-block;
-	background: gray;
+
 }
 
 .wrap_likey2 {
@@ -210,6 +205,10 @@
 	width: 37%;
 	float: left;
 	display: block;
+}
+#info_price{
+	font-family: "cereal";
+	font-size:16pt;
 }
 #wrap_likey_info strong {
 	font-family: "cereal";

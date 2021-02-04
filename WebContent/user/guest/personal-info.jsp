@@ -9,7 +9,7 @@
 		<h2>개인정보</h2>
 		<div class="wrap_pers">
 			<div class="wrap_pers2">
-				<strong>실명</strong>
+				<h4>실명</h4>
 				<div>허가증이나 여권 등 여행 서류에 기재되어 있는 이름을 말합니다</div>
 				<div>
 					<div class="input-group input-group-lg">
@@ -20,7 +20,7 @@
 				</div>
 			</div>
 			<div class="wrap_pers2">
-				<strong>생년월일</strong>
+				<h4>생년월일</h4>
 				<div class="wrap_birth">
 					<select class="month" name="month">
 						<c:choose>
@@ -123,21 +123,19 @@
 				</div>
 			</div>
 			<div class="wrap_pers2">
-				<strong>이메일 주소</strong>
-				<div class="input-group input-group-lg">
-					<input name="id" type="text" class="form-control"
-						placeholder="${dto.getUserid()}" aria-describedby="sizing-addon1">
-				</div>
+				<h4>이메일 주소</h4>
+				<div>이메일 주소는 아이디로 사용됩니다</div>
+				<div>${dto.getUserid()}</div>
 			</div>
 			<div class="wrap_pers2">
-				<strong>전화번호</strong>
+				<h4>전화번호</h4>
 				<div class="input-group input-group-lg">
 					<input name="phone" type="text" class="form-control"
 						placeholder="${dto.getUphone()}" aria-describedby="sizing-addon1">
 				</div>
 			</div>
 			<div class="wrap_pers2">
-				<strong>주소</strong>
+				<h4>주소</h4>
 				<div class="input-group input-group-lg">
 					<input name="address" type="text" class="form-control"
 						placeholder="${dto.getUaddress()}"
@@ -145,7 +143,7 @@
 				</div>
 			</div>
 			<div class="wrap_pers2">
-				<strong>비상연락처</strong>
+				<h4>비상연락처</h4>
 				<div class="input-group input-group-lg">
 					<input name="emerg" type="text" class="form-control"
 						placeholder="${dto.getUemerg()}" aria-describedby="sizing-addon1">

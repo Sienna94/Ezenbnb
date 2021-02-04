@@ -96,11 +96,7 @@
     			<option value="1980">1980</option>
     			<option value="1979">1979</option>
     		</select>
-    		</div>
-    		<div class="content_birth">
-	    		<p>에어비앤비의 회원 전용 할인, 추천 여행 정보, 프로모션 및 정책 변경사항을 이메일로 보내드립니다. 계정 관리의 환경설정 또는 프로모션 알림에서 언제든지 메시지 수신을 거부할 수 있습니다.</p>
-	    		<input type="checkbox" name="agr" value="ok"/>에어비앤비에서 보내는 마케팅 메시지를 받고 싶지 않습니다.
-	    	</div>   		
+    		</div>		
  			<div class="wrap_btn">
  				<button class="btn_join" type="submit">가입하기</button>
  			</div>    		
