@@ -40,12 +40,16 @@
 
 ## 4. 핵심 기능
 
-담당 파트 : 메인페이지 레이아웃, 로그인과 회원가입 페이지, 호스트 페이지, 게스트 페이지
+담당 파트 : 메인페이지 레이아웃, 로그인과 회원가입 페이지, 호스트 페이지, 게스트 페이지 (전과 마찬가지로 담당 파트의 백&프론트 모두)
 
 **4.1. 호스트 페이지**
 
 - 숙소 등록
+
 - 예약 요청 수락, 거절
+
+  ![호스트메인](https://user-images.githubusercontent.com/69448123/110571957-d8137580-819b-11eb-8d1b-847a3804c1be.png)
+  ![승인 내역](https://user-images.githubusercontent.com/69448123/110571967-da75cf80-819b-11eb-9c21-b1cf67e1d013.png)
 
 <br>
 
@@ -53,9 +57,11 @@
 
 - 좋아요한 숙소 리스트(검색시의 숙소리스트에 좋아요 여부에 따라 하트 색이 변하는 것도 했어야 했는데)
 
+  ![게스트3](https://user-images.githubusercontent.com/69448123/110571825-8ff45300-819b-11eb-9062-79367dbd85b9.png)
+
 - 예약 내역
 
-- 개인정보 수정
+  ![게스트1](https://user-images.githubusercontent.com/69448123/110571867-a1d5f600-819b-11eb-8aa0-7a25661a86cf.png)
 
   
 
@@ -69,9 +75,13 @@
 
 > 전 프로젝트인 Oopshoes에서 상품 등록시 프로젝트 내부 폴더에 있는 이미지만 가능. **숙소 등록시 해당 숙소의 이미지가 서버에 저장되도록 해야 했음**
 >
-> - 이전 프로젝트에서는 내부 폴더의 이미지 string만 저장
+> - 이전 프로젝트: 내부 폴더의 이미지 경로 string만 저장
 >
 > **MultipartRequest를 통해 파일을 업로드함** (COS 라이브러리 사용) :pushpin: [코드 확인](https://github.com/Sienna94/Ezenbnb/blob/159928cfdbc0844a5c9d3efa91c8397149e580a8/src/com/house/service/HouseInsertService.java#L39)
+>
+> ![등록하기1](https://user-images.githubusercontent.com/69448123/110571224-9a621d00-819a-11eb-8d15-787d6d22992a.png)<br>
+> ![등록하기2](https://user-images.githubusercontent.com/69448123/110571237-9df5a400-819a-11eb-9307-6472cb50e32d.png)<br>
+> ![등록하기3](https://user-images.githubusercontent.com/69448123/110571243-9fbf6780-819a-11eb-99ad-ae68d9700f95.png)<br>
 >
 > - [참고 포스팅 : 이론](https://gunbin91.github.io/jsp/2019/05/28/jsp_11_file.html)
 > - [참고 포스팅 : 라이브러리 설치 및 사용 코드](https://sesok808.tistory.com/326)
@@ -97,6 +107,10 @@
 > 에어비앤비의 핵심기능이라고 할 수 있는 **실시간 채팅 기능**을 구현하지 못했다. 에어비앤비에서는 호스트에게 게스트가 먼저 연락을 취하고, 숙소에 관련한 질문을 하고, 이후 예약을 진행하는 것이 일반적이다. 따라서 동시 채팅이 가능해야 한다. 
 >
 > 웹소켓을 이용하면 가능할 것이라고 생각했지만 하지 못했다. 단순한 익명 채팅은 어렵지 않게 참고 자료를 찾을 수 있다. 그러나 실시간으로 채팅 내용, 수신자, 발신자를 구분하고 DB에 저장할 방법을 찾지 못함.
+>
+> - 임시 방편으로 채팅처럼 보이는 게시판을 만듬
+>
+>   ![채팅게시판](https://user-images.githubusercontent.com/69448123/110571133-6edf3280-819a-11eb-9881-8880b8a4e6cb.png)
 
 
 
@@ -126,3 +140,4 @@
 
 
 6.5. 로컬 서버에 그친 것, 스프링 사용x, 로그인 외부 API 사용x
+
