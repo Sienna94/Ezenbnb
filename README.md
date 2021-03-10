@@ -79,10 +79,6 @@
 >
 > **MultipartRequest를 통해 파일을 업로드함** (COS 라이브러리 사용) :pushpin: [코드 확인](https://github.com/Sienna94/Ezenbnb/blob/159928cfdbc0844a5c9d3efa91c8397149e580a8/src/com/house/service/HouseInsertService.java#L39)
 >
-> ![등록하기1](https://user-images.githubusercontent.com/69448123/110571224-9a621d00-819a-11eb-8d15-787d6d22992a.png)<br>
-> ![등록하기2](https://user-images.githubusercontent.com/69448123/110571237-9df5a400-819a-11eb-9307-6472cb50e32d.png)<br>
-> ![등록하기3](https://user-images.githubusercontent.com/69448123/110571243-9fbf6780-819a-11eb-99ad-ae68d9700f95.png)<br>
->
 > - [참고 포스팅 : 이론](https://gunbin91.github.io/jsp/2019/05/28/jsp_11_file.html)
 > - [참고 포스팅 : 라이브러리 설치 및 사용 코드](https://sesok808.tistory.com/326)
 
@@ -93,6 +89,12 @@
 >- 서부 내부 이미지 사용만 고려했음. 따라서 서버에 이미지를 올린 이후, 썸네일로 이미지를 보여주는 것을 생각~~낭비의 지름길~~. **이미지를 서버에 올리기 전 보여주는 것을 생각해야했음(페이지 이동 없이)**
 >
 >**JavaScript**사용으로 해결 :pushpin:[코드확인](https://github.com/Sienna94/Ezenbnb/blob/159928cfdbc0844a5c9d3efa91c8397149e580a8/WebContent/host/houseinsert.jsp#L135)
+>
+>
+>
+>![등록하기1](https://user-images.githubusercontent.com/69448123/110571224-9a621d00-819a-11eb-8d15-787d6d22992a.png)<br>
+>![등록하기2](https://user-images.githubusercontent.com/69448123/110571237-9df5a400-819a-11eb-9307-6472cb50e32d.png)<br>
+>![등록하기3](https://user-images.githubusercontent.com/69448123/110571243-9fbf6780-819a-11eb-99ad-ae68d9700f95.png)<br>
 >
 >- 쇼핑몰 프로젝트 상품등록 으로 검색 후 해결책 찾음.
 
@@ -140,4 +142,3 @@
 
 
 6.5. 로컬 서버에 그친 것, 스프링 사용x, 로그인 외부 API 사용x
-
